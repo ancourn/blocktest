@@ -11,6 +11,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Activity, Network, Shield, Zap, Database, TrendingUp, Cpu } from 'lucide-react'
 import PerformanceScalingDashboard from '@/components/performance/performance-scaling-dashboard'
 import { ReliabilityDashboard } from '@/components/reliability/reliability-dashboard'
+import NetworkTestingDashboard from '@/components/network-testing/network-testing-dashboard'
 
 interface BlockchainStatus {
   isRunning: boolean
@@ -116,13 +117,14 @@ export default function Home() {
         </div>
 
         <Tabs defaultValue="overview" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-6">
+          <TabsList className="grid w-full grid-cols-7">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="transactions">Transactions</TabsTrigger>
             <TabsTrigger value="quantum">Quantum Security</TabsTrigger>
             <TabsTrigger value="network">Network</TabsTrigger>
             <TabsTrigger value="performance">Performance Scaling</TabsTrigger>
             <TabsTrigger value="reliability">Reliability</TabsTrigger>
+            <TabsTrigger value="network-testing">Network Testing</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
@@ -437,6 +439,10 @@ export default function Home() {
 
           <TabsContent value="reliability" className="space-y-6">
             <ReliabilityDashboard />
+          </TabsContent>
+
+          <TabsContent value="network-testing" className="space-y-6">
+            <NetworkTestingDashboard />
           </TabsContent>
         </Tabs>
 
