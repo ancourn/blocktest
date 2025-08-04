@@ -1,0 +1,225 @@
+{
+  "loi_templates": {
+    "standard": {
+      "title": "LETTER OF INTENT - KALDRIX QUANTUM DAG BLOCKCHAIN PILOT PROGRAM",
+      "sections": [
+        {
+          "title": "PARTIES",
+          "content": [
+            "This Letter of Intent (\"LOI\") is entered into as of {{date}} (the \"Effective Date\") by and between:",
+            "",
+            "{{company_name}}, a {{company_type}} organized and existing under the laws of {{jurisdiction}} with its principal place of business at {{company_address}} (\"Company\"),",
+            "",
+            "and",
+            "",
+            "KALDRIX Blockchain Technologies, a technology provider specializing in quantum-resistant blockchain solutions (\"KALDRIX\")."
+          ]
+        },
+        {
+          "title": "PURPOSE",
+          "content": [
+            "Company hereby expresses its intent to participate in KALDRIX's Quantum DAG Blockchain Pilot Program (the \"Program\") for the purpose of evaluating KALDRIX's quantum-resistant blockchain technology for potential enterprise deployment.",
+            "",
+            "The Program will focus on the following use cases:",
+            "{{use_cases_bullets}}",
+            "",
+            "This LOI outlines the mutual understanding between the parties regarding the scope, timeline, and terms of the pilot program."
+          ]
+        },
+        {
+          "title": "PILOT PROGRAM SCOPE",
+          "content": [
+            "KALDRIX agrees to provide the following as part of the Program:",
+            "",
+            "1. **Technology Access**: Full access to KALDRIX Quantum DAG Blockchain platform including:",
+            "   - Quantum-resistant cryptographic algorithms (ML-DSA, SPHINCS+, Falcon)",
+            "   - DAG-based transaction processing",
+            "   - Smart contract deployment and execution",
+            "   - Real-time performance monitoring and analytics",
+            "",
+            "2. **Technical Support**: Dedicated technical support including:",
+            "   - Onboarding and integration assistance",
+            "   - Technical training for Company's team",
+            "   - 24/7 support during pilot period",
+            "   - Performance optimization consultation",
+            "",
+            "3. **Pilot Duration**: {{pilot_duration}} (the \"Pilot Period\")",
+            "",
+            "4. **Performance Targets**: KALDRIX will target the following performance metrics:",
+            "   - Transactions per second (TPS): {{target_tps}}",
+            "   - Average transaction latency: {{target_latency}}ms",
+            "   - System uptime: {{target_uptime}}%",
+            "   - Quantum security validation: {{target_quantum_score}}% success rate"
+          ]
+        },
+        {
+          "title": "COMPANY RESPONSIBILITIES",
+          "content": [
+            "Company agrees to the following responsibilities:",
+            "",
+            "1. **Resource Allocation**: Assign dedicated personnel including:",
+            "   - Technical lead for integration",
+            "   - Business stakeholders for evaluation",
+            "   - Security team for assessment",
+            "",
+            "2. **Data Provision**: Provide necessary data and access for:",
+            "   - System integration requirements",
+            "   - Performance testing scenarios",
+            "   - Security validation procedures",
+            "",
+            "3. **Feedback and Evaluation**: Provide regular feedback including:",
+            "   - Weekly progress reports",
+            "   - Performance metrics assessment",
+            "   - Business value evaluation",
+            "   - Final pilot assessment report"
+          ]
+        },
+        {
+          "title": "CONFIDENTIALITY",
+          "content": [
+            "Both parties agree to maintain the confidentiality of all proprietary information exchanged during the Program. This includes but is not limited to:",
+            "",
+            "- Technical specifications and architecture",
+            "- Performance data and metrics",
+            "- Business processes and requirements",
+            "- Financial information and terms",
+            "",
+            "Confidentiality obligations shall survive the termination of this LOI for a period of three (3) years."
+          ]
+        },
+        {
+          "title": "INTELLECTUAL PROPERTY",
+          "content": [
+            "1. **KALDRIX IP**: KALDRIX retains all intellectual property rights in its technology platform, software, and methodologies.",
+            "",
+            "2. **Company IP**: Company retains all intellectual property rights in its business data, processes, and confidential information.",
+            "",
+            "3. **Joint Development**: Any jointly developed intellectual property shall be jointly owned by both parties, with detailed terms to be negotiated in a formal agreement."
+          ]
+        },
+        {
+          "title": "SUCCESS CRITERIA",
+          "content": [
+            "The success of the Pilot Program will be measured against the following criteria:",
+            "",
+            "{{success_criteria_bullets}}",
+            "",
+            "Both parties agree to jointly review and assess these criteria at the conclusion of the Pilot Period."
+          ]
+        },
+        {
+          "title": "COMMERCIAL TERMS",
+          "content": [
+            "1. **Pilot Program Fee**: The Pilot Program will be provided at no cost to Company during the Pilot Period.",
+            "",
+            "2. **Implementation Costs**: Company shall be responsible for:",
+            "   - Internal resource allocation and personnel costs",
+            "   - Integration and deployment expenses",
+            "   - Third-party software or services required",
+            "",
+            "3. **Post-Pilot Licensing**: Should Company wish to continue using KALDRIX's technology after the Pilot Period, both parties agree to negotiate in good faith a commercial licensing agreement.",
+            "",
+            "4. **Pricing Framework**: The post-pilot licensing will be based on:",
+            "   - Transaction volume and processing requirements",
+            "   - Number of users and access points",
+            "   - Level of technical support required",
+            "   - Customization and integration needs"
+          ]
+        },
+        {
+          "title": "TERM AND TERMINATION",
+          "content": [
+            "1. **Term**: This LOI shall remain in effect for the Pilot Period unless terminated earlier.",
+            "",
+            "2. **Termination**: Either party may terminate this LOI upon written notice if:",
+            "   - The other party materially breaches any provision of this LOI",
+            "   - The Pilot Program fails to meet mutually agreed success criteria",
+            "   - Force majeure events prevent performance",
+            "",
+            "3. **Effect of Termination**: Upon termination, both parties shall:",
+            "   - Return all confidential information",
+            "   - Cease use of KALDRIX's technology",
+            "   - Provide final assessment and feedback",
+            "   - Settle any outstanding obligations"
+          ]
+        },
+        {
+          "title": "GOVERNING LAW",
+          "content": [
+            "This LOI shall be governed by and construed in accordance with the laws of {{governing_law}}.",
+            "",
+            "Any disputes arising out of or in connection with this LOI shall be resolved through good faith negotiations between the parties."
+          ]
+        },
+        {
+          "title": "NEXT STEPS",
+          "content": [
+            "Following execution of this LOI, the parties agree to:",
+            "",
+            "1. **Kick-off Meeting**: Within 5 business days to finalize pilot details",
+            "2. **Technical Assessment**: Within 10 business days to evaluate integration requirements",
+            "3. **Implementation Plan**: Within 15 business days to establish detailed timeline",
+            "4. **Pilot Commencement**: Within 30 days of LOI execution",
+            "",
+            "Both parties designate the following representatives:",
+            "",
+            "**Company Representative**:",
+            "Name: {{company_rep_name}}",
+            "Title: {{company_rep_title}}",
+            "Email: {{company_rep_email}}",
+            "Phone: {{company_rep_phone}}",
+            "",
+            "**KALDRIX Representative**:",
+            "Name: {{kaldrix_rep_name}}",
+            "Title: {{kaldrix_rep_title}}",
+            "Email: {{kaldrix_rep_email}}",
+            "Phone: {{kaldrix_rep_phone}}"
+          ]
+        }
+      ],
+      "signatures": [
+        {
+          "party": "Company",
+          "signature_line": "_____________________________________",
+          "name_line": "Name: {{company_signatory_name}}",
+          "title_line": "Title: {{company_signatory_title}}",
+          "date_line": "Date: _________________________________"
+        },
+        {
+          "party": "KALDRIX",
+          "signature_line": "_____________________________________",
+          "name_line": "Name: {{kaldrix_signatory_name}}",
+          "title_line": "Title: {{kaldrix_signatory_title}}",
+          "date_line": "Date: _________________________________"
+        }
+      ]
+    }
+  },
+  "loi_workflow": {
+    "statuses": [
+      "draft",
+      "sent_to_company",
+      "under_review",
+      "negotiation",
+      "approved_legal",
+      "awaiting_signature",
+      "signed",
+      "active",
+      "completed",
+      "terminated"
+    ],
+    "transitions": {
+      "draft": ["sent_to_company", "terminated"],
+      "sent_to_company": ["under_review", "negotiation", "terminated"],
+      "under_review": ["negotiation", "approved_legal", "terminated"],
+      "negotiation": ["under_review", "approved_legal", "terminated"],
+      "approved_legal": ["awaiting_signature", "terminated"],
+      "awaiting_signature": ["signed", "terminated"],
+      "signed": ["active", "terminated"],
+      "active": ["completed", "terminated"],
+      "completed": [],
+      "terminated": []
+    }
+  },
+  "last_updated": "2024-01-15T11:45:00Z"
+}

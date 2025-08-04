@@ -1,0 +1,1304 @@
+{
+  "timestamp": "2025-08-04T12:31:48.772Z",
+  "duration": 68,
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "successRate": "100.00"
+  },
+  "categories": [
+    {
+      "category": "Metrics Collection",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Metrics Collection",
+          "passed": {
+            "tps_current": 1738.8,
+            "latency_p95": 44.4,
+            "latency_p99": 67.2,
+            "cpu_utilization": 45.1,
+            "memory_usage": 61.9,
+            "network_bandwidth": 78.3,
+            "error_rate": 0.8,
+            "active_nodes": 1247,
+            "quantum_security_score": 95.9,
+            "queue_depth": 45,
+            "success_rate": 99.2
+          },
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "timestamp": "2025-08-04T12:31:48.737Z",
+                "metrics": {
+                  "tps_current": 1738.8,
+                  "latency_p95": 44.4,
+                  "latency_p99": 67.2,
+                  "cpu_utilization": 45.1,
+                  "memory_usage": 61.9,
+                  "network_bandwidth": 78.3,
+                  "error_rate": 0.8,
+                  "active_nodes": 1247,
+                  "quantum_security_score": 95.9,
+                  "queue_depth": 45,
+                  "success_rate": 99.2
+                },
+                "system_info": {
+                  "uptime": 86400,
+                  "version": "1.0.0-quantum",
+                  "node_count": 1247,
+                  "network_status": "healthy"
+                }
+              }
+            },
+            "responseTime": 34
+          },
+          "timestamp": "2025-08-04T12:31:48.743Z"
+        },
+        {
+          "name": "Metrics Data Structure",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "timestamp": "2025-08-04T12:31:48.745Z",
+                  "metrics": {
+                    "tps_current": 1738.8,
+                    "latency_p95": 44.4,
+                    "latency_p99": 67.2,
+                    "cpu_utilization": 45.1,
+                    "memory_usage": 61.9,
+                    "network_bandwidth": 78.3,
+                    "error_rate": 0.8,
+                    "active_nodes": 1247,
+                    "quantum_security_score": 95.9,
+                    "queue_depth": 45,
+                    "success_rate": 99.2
+                  },
+                  "system_info": {
+                    "uptime": 86400,
+                    "version": "1.0.0-quantum",
+                    "node_count": 1247,
+                    "network_status": "healthy"
+                  }
+                }
+              },
+              "responseTime": 2
+            }
+          },
+          "timestamp": "2025-08-04T12:31:48.746Z"
+        },
+        {
+          "name": "Metrics Data Types",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "timestamp": "2025-08-04T12:31:48.747Z",
+                  "metrics": {
+                    "tps_current": 1738.8,
+                    "latency_p95": 44.4,
+                    "latency_p99": 67.2,
+                    "cpu_utilization": 45.1,
+                    "memory_usage": 61.9,
+                    "network_bandwidth": 78.3,
+                    "error_rate": 0.8,
+                    "active_nodes": 1247,
+                    "quantum_security_score": 95.9,
+                    "queue_depth": 45,
+                    "success_rate": 99.2
+                  },
+                  "system_info": {
+                    "uptime": 86400,
+                    "version": "1.0.0-quantum",
+                    "node_count": 1247,
+                    "network_status": "healthy"
+                  }
+                }
+              },
+              "responseTime": 1
+            }
+          },
+          "timestamp": "2025-08-04T12:31:48.748Z"
+        },
+        {
+          "name": "Monitoring Health Check",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "status": "healthy",
+                "checks": {
+                  "database": "healthy",
+                  "network": "healthy",
+                  "quantum": "healthy",
+                  "monitoring": "healthy"
+                },
+                "uptime": 86400,
+                "last_check": "2025-08-04T12:31:48.748Z"
+              }
+            },
+            "responseTime": 1
+          },
+          "timestamp": "2025-08-04T12:31:48.749Z"
+        }
+      ]
+    },
+    {
+      "category": "Alert Generation",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Alert Retrieval",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "alerts": [
+                  {
+                    "id": "alert_001",
+                    "name": "TPS Below Threshold",
+                    "severity": "high",
+                    "metric": "tps_current",
+                    "current_value": 1200,
+                    "threshold": 1500,
+                    "status": "active",
+                    "timestamp": "2025-08-04T12:31:48.750Z",
+                    "description": "TPS has dropped below the threshold of 1500"
+                  },
+                  {
+                    "id": "alert_002",
+                    "name": "High Latency Detected",
+                    "severity": "medium",
+                    "metric": "latency_p95",
+                    "current_value": 250,
+                    "threshold": 200,
+                    "status": "active",
+                    "timestamp": "2025-08-04T12:31:48.750Z",
+                    "description": "Latency has exceeded the threshold of 200ms"
+                  }
+                ],
+                "alert_counts": {
+                  "total": 2,
+                  "active": 2,
+                  "resolved": 0,
+                  "suppressed": 0
+                }
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:31:48.751Z"
+        },
+        {
+          "name": "Alert Rules Configuration",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "rules": [
+                  {
+                    "id": "tps_drop",
+                    "name": "TPS Below Threshold",
+                    "metric": "tps_current",
+                    "condition": "below",
+                    "threshold": 1500,
+                    "severity": "high",
+                    "enabled": true
+                  },
+                  {
+                    "id": "latency_spike",
+                    "name": "High Latency Detected",
+                    "metric": "latency_p95",
+                    "condition": "above",
+                    "threshold": 200,
+                    "severity": "medium",
+                    "enabled": true
+                  }
+                ]
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:31:48.753Z"
+        },
+        {
+          "name": "Alert Generation Test",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "test_alert_id": "test_t1q9mksen",
+                "status": "triggered",
+                "message": "Test alert generated successfully",
+                "timestamp": "2025-08-04T12:31:48.757Z"
+              }
+            },
+            "responseTime": 4
+          },
+          "timestamp": "2025-08-04T12:31:48.758Z"
+        },
+        {
+          "name": "Alert Data Structure",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "alerts": [
+                    {
+                      "id": "alert_001",
+                      "name": "TPS Below Threshold",
+                      "severity": "high",
+                      "metric": "tps_current",
+                      "current_value": 1200,
+                      "threshold": 1500,
+                      "status": "active",
+                      "timestamp": "2025-08-04T12:31:48.758Z",
+                      "description": "TPS has dropped below the threshold of 1500"
+                    },
+                    {
+                      "id": "alert_002",
+                      "name": "High Latency Detected",
+                      "severity": "medium",
+                      "metric": "latency_p95",
+                      "current_value": 250,
+                      "threshold": 200,
+                      "status": "active",
+                      "timestamp": "2025-08-04T12:31:48.758Z",
+                      "description": "Latency has exceeded the threshold of 200ms"
+                    }
+                  ],
+                  "alert_counts": {
+                    "total": 2,
+                    "active": 2,
+                    "resolved": 0,
+                    "suppressed": 0
+                  }
+                }
+              },
+              "responseTime": 1
+            }
+          },
+          "timestamp": "2025-08-04T12:31:48.759Z"
+        }
+      ]
+    },
+    {
+      "category": "Reporting System",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Report Retrieval",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "reports": [
+                  {
+                    "id": "report_001",
+                    "name": "Daily Performance Summary",
+                    "type": "daily",
+                    "format": "pdf",
+                    "generated_at": "2025-08-04T12:31:48.761Z",
+                    "status": "completed",
+                    "download_url": "/api/monitoring/reports/report_001.pdf"
+                  },
+                  {
+                    "id": "report_002",
+                    "name": "Weekly Performance Analysis",
+                    "type": "weekly",
+                    "format": "pdf",
+                    "generated_at": "2025-08-03T12:31:48.761Z",
+                    "status": "completed",
+                    "download_url": "/api/monitoring/reports/report_002.pdf"
+                  }
+                ],
+                "summary": {
+                  "total_reports": 2,
+                  "completed": 2,
+                  "failed": 0,
+                  "pending": 0
+                }
+              }
+            },
+            "responseTime": 3
+          },
+          "timestamp": "2025-08-04T12:31:48.762Z"
+        },
+        {
+          "name": "Report Generation",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "report_id": "report_o6jun252m",
+                "status": "generating",
+                "estimated_completion": "2025-08-04T12:32:18.764Z",
+                "message": "Report generation started successfully"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:31:48.764Z"
+        },
+        {
+          "name": "Report Schedule",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "schedules": [
+                  {
+                    "name": "daily_summary",
+                    "cron": "0 9 * * *",
+                    "enabled": true,
+                    "next_run": "2025-08-05T12:31:48.765Z"
+                  },
+                  {
+                    "name": "weekly_performance",
+                    "cron": "0 9 * * 1",
+                    "enabled": true,
+                    "next_run": "2025-08-11T12:31:48.765Z"
+                  }
+                ]
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:31:48.766Z"
+        },
+        {
+          "name": "Report Data Structure",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "reports": [
+                    {
+                      "id": "report_001",
+                      "name": "Daily Performance Summary",
+                      "type": "daily",
+                      "format": "pdf",
+                      "generated_at": "2025-08-04T12:31:48.767Z",
+                      "status": "completed",
+                      "download_url": "/api/monitoring/reports/report_001.pdf"
+                    },
+                    {
+                      "id": "report_002",
+                      "name": "Weekly Performance Analysis",
+                      "type": "weekly",
+                      "format": "pdf",
+                      "generated_at": "2025-08-03T12:31:48.767Z",
+                      "status": "completed",
+                      "download_url": "/api/monitoring/reports/report_002.pdf"
+                    }
+                  ],
+                  "summary": {
+                    "total_reports": 2,
+                    "completed": 2,
+                    "failed": 0,
+                    "pending": 0
+                  }
+                }
+              },
+              "responseTime": 1
+            }
+          },
+          "timestamp": "2025-08-04T12:31:48.767Z"
+        }
+      ]
+    },
+    {
+      "category": "Dashboard Integration",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Dashboard Data Retrieval",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "panels": [
+                  {
+                    "id": "tps_panel",
+                    "title": "Transactions Per Second",
+                    "type": "timeseries",
+                    "data": {
+                      "current": 1738.8,
+                      "target": 2000,
+                      "trend": "increasing",
+                      "data_points": [
+                        {
+                          "timestamp": "2025-08-03T13:31:48.768Z",
+                          "value": 1880.6876334246
+                        },
+                        {
+                          "timestamp": "2025-08-03T14:31:48.768Z",
+                          "value": 1737.276796339659
+                        },
+                        {
+                          "timestamp": "2025-08-03T15:31:48.768Z",
+                          "value": 1636.3266106581068
+                        },
+                        {
+                          "timestamp": "2025-08-03T16:31:48.768Z",
+                          "value": 1578.5688209679865
+                        },
+                        {
+                          "timestamp": "2025-08-03T17:31:48.768Z",
+                          "value": 1933.2055263763489
+                        },
+                        {
+                          "timestamp": "2025-08-03T18:31:48.768Z",
+                          "value": 1835.5971793973226
+                        },
+                        {
+                          "timestamp": "2025-08-03T19:31:48.768Z",
+                          "value": 1880.4197732462299
+                        },
+                        {
+                          "timestamp": "2025-08-03T20:31:48.768Z",
+                          "value": 1700.3415263080635
+                        },
+                        {
+                          "timestamp": "2025-08-03T21:31:48.768Z",
+                          "value": 1698.6014102531497
+                        },
+                        {
+                          "timestamp": "2025-08-03T22:31:48.768Z",
+                          "value": 1992.243230164106
+                        },
+                        {
+                          "timestamp": "2025-08-03T23:31:48.768Z",
+                          "value": 1652.1770852288682
+                        },
+                        {
+                          "timestamp": "2025-08-04T00:31:48.768Z",
+                          "value": 1807.1010813158953
+                        },
+                        {
+                          "timestamp": "2025-08-04T01:31:48.768Z",
+                          "value": 1964.4559168038986
+                        },
+                        {
+                          "timestamp": "2025-08-04T02:31:48.768Z",
+                          "value": 1738.236489017632
+                        },
+                        {
+                          "timestamp": "2025-08-04T03:31:48.768Z",
+                          "value": 1950.279500972366
+                        },
+                        {
+                          "timestamp": "2025-08-04T04:31:48.768Z",
+                          "value": 1548.2766944395382
+                        },
+                        {
+                          "timestamp": "2025-08-04T05:31:48.768Z",
+                          "value": 1611.0120878823773
+                        },
+                        {
+                          "timestamp": "2025-08-04T06:31:48.768Z",
+                          "value": 1679.1364838927489
+                        },
+                        {
+                          "timestamp": "2025-08-04T07:31:48.768Z",
+                          "value": 1743.719406347448
+                        },
+                        {
+                          "timestamp": "2025-08-04T08:31:48.768Z",
+                          "value": 1712.6087722463765
+                        },
+                        {
+                          "timestamp": "2025-08-04T09:31:48.768Z",
+                          "value": 1725.1128189547574
+                        },
+                        {
+                          "timestamp": "2025-08-04T10:31:48.768Z",
+                          "value": 1926.2391192960351
+                        },
+                        {
+                          "timestamp": "2025-08-04T11:31:48.768Z",
+                          "value": 1997.6755584821128
+                        },
+                        {
+                          "timestamp": "2025-08-04T12:31:48.768Z",
+                          "value": 1579.7860054689872
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "latency_panel",
+                    "title": "Transaction Latency",
+                    "type": "timeseries",
+                    "data": {
+                      "current_p95": 44.4,
+                      "current_p99": 67.2,
+                      "target": 100,
+                      "trend": "stable",
+                      "data_points": [
+                        {
+                          "timestamp": "2025-08-03T13:31:48.768Z",
+                          "p95": 53.49437589454613,
+                          "p99": 88.41921495570591
+                        },
+                        {
+                          "timestamp": "2025-08-03T14:31:48.768Z",
+                          "p95": 58.41166188546087,
+                          "p99": 86.32739058002333
+                        },
+                        {
+                          "timestamp": "2025-08-03T15:31:48.768Z",
+                          "p95": 40.35339846757256,
+                          "p99": 89.17863290044602
+                        },
+                        {
+                          "timestamp": "2025-08-03T16:31:48.768Z",
+                          "p95": 42.27429361459825,
+                          "p99": 77.13720727523221
+                        },
+                        {
+                          "timestamp": "2025-08-03T17:31:48.768Z",
+                          "p95": 44.920987355216646,
+                          "p99": 68.54600390662415
+                        },
+                        {
+                          "timestamp": "2025-08-03T18:31:48.768Z",
+                          "p95": 40.270870825324515,
+                          "p99": 61.003551227640514
+                        },
+                        {
+                          "timestamp": "2025-08-03T19:31:48.768Z",
+                          "p95": 46.74055663521999,
+                          "p99": 74.3944864535029
+                        },
+                        {
+                          "timestamp": "2025-08-03T20:31:48.768Z",
+                          "p95": 44.302768963427546,
+                          "p99": 88.94011878220749
+                        },
+                        {
+                          "timestamp": "2025-08-03T21:31:48.768Z",
+                          "p95": 43.20427396234043,
+                          "p99": 70.3671438549825
+                        },
+                        {
+                          "timestamp": "2025-08-03T22:31:48.768Z",
+                          "p95": 58.428367623954394,
+                          "p99": 78.92476227473676
+                        },
+                        {
+                          "timestamp": "2025-08-03T23:31:48.768Z",
+                          "p95": 53.44152665299613,
+                          "p99": 88.99285546630378
+                        },
+                        {
+                          "timestamp": "2025-08-04T00:31:48.768Z",
+                          "p95": 51.259836659700696,
+                          "p99": 84.7904123291296
+                        },
+                        {
+                          "timestamp": "2025-08-04T01:31:48.768Z",
+                          "p95": 57.827488552811175,
+                          "p99": 67.40660560136514
+                        },
+                        {
+                          "timestamp": "2025-08-04T02:31:48.768Z",
+                          "p95": 55.54557112952138,
+                          "p99": 69.55078717715416
+                        },
+                        {
+                          "timestamp": "2025-08-04T03:31:48.768Z",
+                          "p95": 44.85543885609325,
+                          "p99": 78.02010999606826
+                        },
+                        {
+                          "timestamp": "2025-08-04T04:31:48.768Z",
+                          "p95": 50.383742181981454,
+                          "p99": 76.40569063119447
+                        },
+                        {
+                          "timestamp": "2025-08-04T05:31:48.768Z",
+                          "p95": 55.12544347485336,
+                          "p99": 81.67883258231846
+                        },
+                        {
+                          "timestamp": "2025-08-04T06:31:48.768Z",
+                          "p95": 40.16208286826612,
+                          "p99": 85.33325810103022
+                        },
+                        {
+                          "timestamp": "2025-08-04T07:31:48.768Z",
+                          "p95": 55.94869634233322,
+                          "p99": 74.45475137768881
+                        },
+                        {
+                          "timestamp": "2025-08-04T08:31:48.768Z",
+                          "p95": 54.56893675977657,
+                          "p99": 77.29946088772994
+                        },
+                        {
+                          "timestamp": "2025-08-04T09:31:48.768Z",
+                          "p95": 47.398892560191605,
+                          "p99": 89.03616868324625
+                        },
+                        {
+                          "timestamp": "2025-08-04T10:31:48.768Z",
+                          "p95": 41.31893569208805,
+                          "p99": 85.50755826599732
+                        },
+                        {
+                          "timestamp": "2025-08-04T11:31:48.768Z",
+                          "p95": 54.0210592206744,
+                          "p99": 77.41811154092407
+                        },
+                        {
+                          "timestamp": "2025-08-04T12:31:48.768Z",
+                          "p95": 57.81308594959189,
+                          "p99": 61.2296872613975
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "quantum_panel",
+                    "title": "Quantum Security Score",
+                    "type": "singlestat",
+                    "data": {
+                      "current": 95.9,
+                      "target": 90,
+                      "status": "optimal",
+                      "trend": "stable"
+                    }
+                  }
+                ],
+                "overall_status": "healthy",
+                "last_updated": "2025-08-04T12:31:48.768Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:31:48.769Z"
+        },
+        {
+          "name": "Dashboard Panel Structure",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "panels": [
+                    {
+                      "id": "tps_panel",
+                      "title": "Transactions Per Second",
+                      "type": "timeseries",
+                      "data": {
+                        "current": 1738.8,
+                        "target": 2000,
+                        "trend": "increasing",
+                        "data_points": [
+                          {
+                            "timestamp": "2025-08-03T13:31:48.770Z",
+                            "value": 1674.0463206982067
+                          },
+                          {
+                            "timestamp": "2025-08-03T14:31:48.770Z",
+                            "value": 1844.7418743462406
+                          },
+                          {
+                            "timestamp": "2025-08-03T15:31:48.770Z",
+                            "value": 1984.2494201015143
+                          },
+                          {
+                            "timestamp": "2025-08-03T16:31:48.770Z",
+                            "value": 1553.9787031727342
+                          },
+                          {
+                            "timestamp": "2025-08-03T17:31:48.770Z",
+                            "value": 1918.105854271846
+                          },
+                          {
+                            "timestamp": "2025-08-03T18:31:48.770Z",
+                            "value": 1707.8293952746271
+                          },
+                          {
+                            "timestamp": "2025-08-03T19:31:48.770Z",
+                            "value": 1798.2781019080226
+                          },
+                          {
+                            "timestamp": "2025-08-03T20:31:48.770Z",
+                            "value": 1868.5181919585389
+                          },
+                          {
+                            "timestamp": "2025-08-03T21:31:48.770Z",
+                            "value": 1951.0714269520315
+                          },
+                          {
+                            "timestamp": "2025-08-03T22:31:48.770Z",
+                            "value": 1525.962134610817
+                          },
+                          {
+                            "timestamp": "2025-08-03T23:31:48.770Z",
+                            "value": 1694.0352639365979
+                          },
+                          {
+                            "timestamp": "2025-08-04T00:31:48.770Z",
+                            "value": 1580.4964469613058
+                          },
+                          {
+                            "timestamp": "2025-08-04T01:31:48.770Z",
+                            "value": 1968.1403427079613
+                          },
+                          {
+                            "timestamp": "2025-08-04T02:31:48.770Z",
+                            "value": 1814.7573712351475
+                          },
+                          {
+                            "timestamp": "2025-08-04T03:31:48.770Z",
+                            "value": 1546.0349528641057
+                          },
+                          {
+                            "timestamp": "2025-08-04T04:31:48.770Z",
+                            "value": 1529.9711064271844
+                          },
+                          {
+                            "timestamp": "2025-08-04T05:31:48.770Z",
+                            "value": 1948.565542090216
+                          },
+                          {
+                            "timestamp": "2025-08-04T06:31:48.770Z",
+                            "value": 1619.7501327239095
+                          },
+                          {
+                            "timestamp": "2025-08-04T07:31:48.770Z",
+                            "value": 1953.175734935287
+                          },
+                          {
+                            "timestamp": "2025-08-04T08:31:48.770Z",
+                            "value": 1519.0434373299727
+                          },
+                          {
+                            "timestamp": "2025-08-04T09:31:48.770Z",
+                            "value": 1968.3360490156726
+                          },
+                          {
+                            "timestamp": "2025-08-04T10:31:48.770Z",
+                            "value": 1967.3296234796799
+                          },
+                          {
+                            "timestamp": "2025-08-04T11:31:48.770Z",
+                            "value": 1880.6914543725666
+                          },
+                          {
+                            "timestamp": "2025-08-04T12:31:48.770Z",
+                            "value": 1962.5577185000898
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "latency_panel",
+                      "title": "Transaction Latency",
+                      "type": "timeseries",
+                      "data": {
+                        "current_p95": 44.4,
+                        "current_p99": 67.2,
+                        "target": 100,
+                        "trend": "stable",
+                        "data_points": [
+                          {
+                            "timestamp": "2025-08-03T13:31:48.770Z",
+                            "p95": 52.4616258009323,
+                            "p99": 64.35465337469105
+                          },
+                          {
+                            "timestamp": "2025-08-03T14:31:48.770Z",
+                            "p95": 48.733510574203535,
+                            "p99": 84.45172406187353
+                          },
+                          {
+                            "timestamp": "2025-08-03T15:31:48.770Z",
+                            "p95": 42.31693896254318,
+                            "p99": 69.59477882278075
+                          },
+                          {
+                            "timestamp": "2025-08-03T16:31:48.770Z",
+                            "p95": 59.14081269207645,
+                            "p99": 83.37594290635012
+                          },
+                          {
+                            "timestamp": "2025-08-03T17:31:48.770Z",
+                            "p95": 57.66305402326127,
+                            "p99": 77.73247967817579
+                          },
+                          {
+                            "timestamp": "2025-08-03T18:31:48.770Z",
+                            "p95": 56.47569812502539,
+                            "p99": 65.05988871620418
+                          },
+                          {
+                            "timestamp": "2025-08-03T19:31:48.770Z",
+                            "p95": 57.36512936217383,
+                            "p99": 76.32107553328174
+                          },
+                          {
+                            "timestamp": "2025-08-03T20:31:48.770Z",
+                            "p95": 46.53664833547738,
+                            "p99": 62.99909861955223
+                          },
+                          {
+                            "timestamp": "2025-08-03T21:31:48.770Z",
+                            "p95": 48.37950499252554,
+                            "p99": 77.04125007250315
+                          },
+                          {
+                            "timestamp": "2025-08-03T22:31:48.770Z",
+                            "p95": 44.75168890294117,
+                            "p99": 81.92307861521542
+                          },
+                          {
+                            "timestamp": "2025-08-03T23:31:48.770Z",
+                            "p95": 50.200164367497905,
+                            "p99": 74.58942987799566
+                          },
+                          {
+                            "timestamp": "2025-08-04T00:31:48.770Z",
+                            "p95": 46.777125972431676,
+                            "p99": 68.46513528821214
+                          },
+                          {
+                            "timestamp": "2025-08-04T01:31:48.770Z",
+                            "p95": 42.80759868608253,
+                            "p99": 72.42725374892089
+                          },
+                          {
+                            "timestamp": "2025-08-04T02:31:48.770Z",
+                            "p95": 56.08191851749092,
+                            "p99": 63.82635901851639
+                          },
+                          {
+                            "timestamp": "2025-08-04T03:31:48.770Z",
+                            "p95": 45.717391113912235,
+                            "p99": 82.74429799453608
+                          },
+                          {
+                            "timestamp": "2025-08-04T04:31:48.770Z",
+                            "p95": 51.36548335570711,
+                            "p99": 61.50343250666526
+                          },
+                          {
+                            "timestamp": "2025-08-04T05:31:48.770Z",
+                            "p95": 51.48718132314952,
+                            "p99": 86.85373120453376
+                          },
+                          {
+                            "timestamp": "2025-08-04T06:31:48.770Z",
+                            "p95": 49.231729507641795,
+                            "p99": 65.10275860123657
+                          },
+                          {
+                            "timestamp": "2025-08-04T07:31:48.770Z",
+                            "p95": 46.82972918068738,
+                            "p99": 76.75716857590363
+                          },
+                          {
+                            "timestamp": "2025-08-04T08:31:48.770Z",
+                            "p95": 51.36841841105188,
+                            "p99": 88.21968175057575
+                          },
+                          {
+                            "timestamp": "2025-08-04T09:31:48.770Z",
+                            "p95": 45.875964560425686,
+                            "p99": 80.94060314755461
+                          },
+                          {
+                            "timestamp": "2025-08-04T10:31:48.770Z",
+                            "p95": 47.135163869964444,
+                            "p99": 76.62337085580222
+                          },
+                          {
+                            "timestamp": "2025-08-04T11:31:48.770Z",
+                            "p95": 44.58245974184723,
+                            "p99": 62.186810902764314
+                          },
+                          {
+                            "timestamp": "2025-08-04T12:31:48.770Z",
+                            "p95": 52.241565480357224,
+                            "p99": 80.40311381237514
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "quantum_panel",
+                      "title": "Quantum Security Score",
+                      "type": "singlestat",
+                      "data": {
+                        "current": 95.9,
+                        "target": 90,
+                        "status": "optimal",
+                        "trend": "stable"
+                      }
+                    }
+                  ],
+                  "overall_status": "healthy",
+                  "last_updated": "2025-08-04T12:31:48.770Z"
+                }
+              },
+              "responseTime": 1
+            }
+          },
+          "timestamp": "2025-08-04T12:31:48.770Z"
+        },
+        {
+          "name": "Dashboard Refresh",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "refresh_timestamp": "2025-08-04T12:31:48.771Z",
+                "panels_updated": 3,
+                "data_freshness": "current"
+              }
+            },
+            "responseTime": 1
+          },
+          "timestamp": "2025-08-04T12:31:48.771Z"
+        },
+        {
+          "name": "Data Freshness",
+          "passed": true,
+          "details": {
+            "response": {
+              "success": true,
+              "status": 200,
+              "data": {
+                "success": true,
+                "data": {
+                  "panels": [
+                    {
+                      "id": "tps_panel",
+                      "title": "Transactions Per Second",
+                      "type": "timeseries",
+                      "data": {
+                        "current": 1738.8,
+                        "target": 2000,
+                        "trend": "increasing",
+                        "data_points": [
+                          {
+                            "timestamp": "2025-08-03T13:31:48.771Z",
+                            "value": 1619.9155486682823
+                          },
+                          {
+                            "timestamp": "2025-08-03T14:31:48.771Z",
+                            "value": 1602.8556618475016
+                          },
+                          {
+                            "timestamp": "2025-08-03T15:31:48.771Z",
+                            "value": 1612.1649259305566
+                          },
+                          {
+                            "timestamp": "2025-08-03T16:31:48.771Z",
+                            "value": 1960.9449435412714
+                          },
+                          {
+                            "timestamp": "2025-08-03T17:31:48.771Z",
+                            "value": 1925.3845244249887
+                          },
+                          {
+                            "timestamp": "2025-08-03T18:31:48.771Z",
+                            "value": 1725.6561085285452
+                          },
+                          {
+                            "timestamp": "2025-08-03T19:31:48.771Z",
+                            "value": 1742.9449460815931
+                          },
+                          {
+                            "timestamp": "2025-08-03T20:31:48.771Z",
+                            "value": 1774.1458722654634
+                          },
+                          {
+                            "timestamp": "2025-08-03T21:31:48.771Z",
+                            "value": 1605.7840450873368
+                          },
+                          {
+                            "timestamp": "2025-08-03T22:31:48.771Z",
+                            "value": 1850.834252739658
+                          },
+                          {
+                            "timestamp": "2025-08-03T23:31:48.771Z",
+                            "value": 1659.1396231552935
+                          },
+                          {
+                            "timestamp": "2025-08-04T00:31:48.771Z",
+                            "value": 1826.8746299494235
+                          },
+                          {
+                            "timestamp": "2025-08-04T01:31:48.771Z",
+                            "value": 1726.0504079988305
+                          },
+                          {
+                            "timestamp": "2025-08-04T02:31:48.771Z",
+                            "value": 1523.8101391153134
+                          },
+                          {
+                            "timestamp": "2025-08-04T03:31:48.771Z",
+                            "value": 1968.7172510818853
+                          },
+                          {
+                            "timestamp": "2025-08-04T04:31:48.771Z",
+                            "value": 1969.543759626594
+                          },
+                          {
+                            "timestamp": "2025-08-04T05:31:48.771Z",
+                            "value": 1535.542729690039
+                          },
+                          {
+                            "timestamp": "2025-08-04T06:31:48.771Z",
+                            "value": 1792.1276967491124
+                          },
+                          {
+                            "timestamp": "2025-08-04T07:31:48.771Z",
+                            "value": 1821.2535464776397
+                          },
+                          {
+                            "timestamp": "2025-08-04T08:31:48.771Z",
+                            "value": 1684.5175287631614
+                          },
+                          {
+                            "timestamp": "2025-08-04T09:31:48.771Z",
+                            "value": 1634.1883984190663
+                          },
+                          {
+                            "timestamp": "2025-08-04T10:31:48.771Z",
+                            "value": 1788.766892877958
+                          },
+                          {
+                            "timestamp": "2025-08-04T11:31:48.771Z",
+                            "value": 1505.9529441361915
+                          },
+                          {
+                            "timestamp": "2025-08-04T12:31:48.771Z",
+                            "value": 1551.8781864907885
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "latency_panel",
+                      "title": "Transaction Latency",
+                      "type": "timeseries",
+                      "data": {
+                        "current_p95": 44.4,
+                        "current_p99": 67.2,
+                        "target": 100,
+                        "trend": "stable",
+                        "data_points": [
+                          {
+                            "timestamp": "2025-08-03T13:31:48.771Z",
+                            "p95": 59.97508740219327,
+                            "p99": 83.14746067842255
+                          },
+                          {
+                            "timestamp": "2025-08-03T14:31:48.771Z",
+                            "p95": 55.48648353732422,
+                            "p99": 89.92153997872613
+                          },
+                          {
+                            "timestamp": "2025-08-03T15:31:48.771Z",
+                            "p95": 53.75800022348494,
+                            "p99": 78.20050416520135
+                          },
+                          {
+                            "timestamp": "2025-08-03T16:31:48.771Z",
+                            "p95": 49.98839933935494,
+                            "p99": 77.34096217114663
+                          },
+                          {
+                            "timestamp": "2025-08-03T17:31:48.771Z",
+                            "p95": 43.13888017135837,
+                            "p99": 81.23240253390576
+                          },
+                          {
+                            "timestamp": "2025-08-03T18:31:48.771Z",
+                            "p95": 57.02810351701852,
+                            "p99": 72.74524927276022
+                          },
+                          {
+                            "timestamp": "2025-08-03T19:31:48.771Z",
+                            "p95": 58.41114847564778,
+                            "p99": 61.438463486438366
+                          },
+                          {
+                            "timestamp": "2025-08-03T20:31:48.771Z",
+                            "p95": 50.55057615869978,
+                            "p99": 78.24260854462446
+                          },
+                          {
+                            "timestamp": "2025-08-03T21:31:48.771Z",
+                            "p95": 57.81628840296682,
+                            "p99": 66.56467180194312
+                          },
+                          {
+                            "timestamp": "2025-08-03T22:31:48.771Z",
+                            "p95": 58.74324370064259,
+                            "p99": 88.05616457739205
+                          },
+                          {
+                            "timestamp": "2025-08-03T23:31:48.771Z",
+                            "p95": 54.316748899923795,
+                            "p99": 88.62256648141066
+                          },
+                          {
+                            "timestamp": "2025-08-04T00:31:48.771Z",
+                            "p95": 48.23393439259113,
+                            "p99": 69.63991440998629
+                          },
+                          {
+                            "timestamp": "2025-08-04T01:31:48.771Z",
+                            "p95": 51.05612924915118,
+                            "p99": 81.98807499006617
+                          },
+                          {
+                            "timestamp": "2025-08-04T02:31:48.771Z",
+                            "p95": 50.63086448434602,
+                            "p99": 65.54443399726561
+                          },
+                          {
+                            "timestamp": "2025-08-04T03:31:48.771Z",
+                            "p95": 57.73853842455543,
+                            "p99": 65.68651194951315
+                          },
+                          {
+                            "timestamp": "2025-08-04T04:31:48.771Z",
+                            "p95": 59.13586891707282,
+                            "p99": 68.2834965388848
+                          },
+                          {
+                            "timestamp": "2025-08-04T05:31:48.771Z",
+                            "p95": 44.8459471421875,
+                            "p99": 71.17320354944013
+                          },
+                          {
+                            "timestamp": "2025-08-04T06:31:48.771Z",
+                            "p95": 40.258618314412494,
+                            "p99": 77.50763578493456
+                          },
+                          {
+                            "timestamp": "2025-08-04T07:31:48.771Z",
+                            "p95": 47.56021491180825,
+                            "p99": 84.19802510927128
+                          },
+                          {
+                            "timestamp": "2025-08-04T08:31:48.771Z",
+                            "p95": 51.12969429049211,
+                            "p99": 83.64296271162068
+                          },
+                          {
+                            "timestamp": "2025-08-04T09:31:48.771Z",
+                            "p95": 58.46226613867144,
+                            "p99": 76.3042462434235
+                          },
+                          {
+                            "timestamp": "2025-08-04T10:31:48.771Z",
+                            "p95": 41.76915751613982,
+                            "p99": 76.32644208383937
+                          },
+                          {
+                            "timestamp": "2025-08-04T11:31:48.771Z",
+                            "p95": 56.404505484333995,
+                            "p99": 69.58491698904476
+                          },
+                          {
+                            "timestamp": "2025-08-04T12:31:48.771Z",
+                            "p95": 42.03360224343437,
+                            "p99": 62.62273680894192
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "quantum_panel",
+                      "title": "Quantum Security Score",
+                      "type": "singlestat",
+                      "data": {
+                        "current": 95.9,
+                        "target": 90,
+                        "status": "optimal",
+                        "trend": "stable"
+                      }
+                    }
+                  ],
+                  "overall_status": "healthy",
+                  "last_updated": "2025-08-04T12:31:48.771Z"
+                }
+              },
+              "responseTime": 1
+            },
+            "timeDiff": 1,
+            "isFresh": true
+          },
+          "timestamp": "2025-08-04T12:31:48.772Z"
+        }
+      ]
+    }
+  ]
+}

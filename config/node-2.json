@@ -1,0 +1,48 @@
+{
+  "nodeId": "kaldrix-node-2",
+  "role": "miner",
+  "network": "kaldrix-mini-testnet",
+  "port": 3001,
+  "host": "localhost",
+  "dataDir": "./data/node-2",
+  "logDir": "./logs/node-2",
+  "seedNodes": [
+    "localhost:3000",
+    "localhost:3002"
+  ],
+  "api": {
+    "enabled": true,
+    "port": 8081,
+    "websocket": {
+      "enabled": true,
+      "port": 8082
+    }
+  },
+  "consensus": {
+    "enabled": true,
+    "validator": false,
+    "stake": "0"
+  },
+  "mining": {
+    "enabled": true,
+    "hashPower": 1000,
+    "poolAddress": "0x0000000000000000000000000000000000000000"
+  },
+  "features": {
+    "gpuAcceleration": true,
+    "batching": true,
+    "sharding": true,
+    "quantumCryptography": true
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": true,
+    "healthChecks": true,
+    "alerting": true
+  },
+  "reliability": {
+    "failoverEnabled": true,
+    "healthMonitoring": true,
+    "autoRecovery": true
+  }
+}

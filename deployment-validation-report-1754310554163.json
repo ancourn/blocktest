@@ -1,0 +1,144 @@
+{
+  "timestamp": "2025-08-04T12:29:14.163Z",
+  "duration": 49,
+  "summary": {
+    "total": 21,
+    "passed": 13,
+    "failed": 8,
+    "successRate": "61.90"
+  },
+  "scripts": [
+    {
+      "name": "Regional Nodes Deployment",
+      "path": "deployment/regional-nodes/deploy-regional-nodes.sh",
+      "tests": [
+        {
+          "name": "File Accessibility",
+          "passed": true,
+          "details": "File exists and is readable (14866 bytes)"
+        },
+        {
+          "name": "Syntax Validation",
+          "passed": true,
+          "details": "Script syntax is valid"
+        },
+        {
+          "name": "Script Permissions",
+          "passed": false,
+          "details": "Script lacks execute permissions"
+        },
+        {
+          "name": "Dependencies Check",
+          "passed": true,
+          "details": "All required dependencies are available"
+        },
+        {
+          "name": "Configuration Files",
+          "passed": false,
+          "details": "Missing configuration files: /tmp/${region}_node_config.json,   2. Review deployment report: /home/z/my-project/deployment/regional-nodes/deployment-report.json, /etc/kaldrix, /var/lib/kaldrix, /etc/netplan"
+        },
+        {
+          "name": "Security Validation",
+          "passed": true,
+          "details": "No security issues detected"
+        },
+        {
+          "name": "Dry-run Simulation",
+          "passed": true,
+          "details": "Dry-run simulation completed successfully"
+        }
+      ],
+      "passed": 5,
+      "failed": 2,
+      "timestamp": "2025-08-04T12:29:14.116Z"
+    },
+    {
+      "name": "Parallel Processing Test",
+      "path": "scripts/test-parallel-processing.sh",
+      "tests": [
+        {
+          "name": "File Accessibility",
+          "passed": true,
+          "details": "File exists and is readable (9393 bytes)"
+        },
+        {
+          "name": "Syntax Validation",
+          "passed": true,
+          "details": "Script syntax is valid"
+        },
+        {
+          "name": "Script Permissions",
+          "passed": false,
+          "details": "Script lacks execute permissions"
+        },
+        {
+          "name": "Dependencies Check",
+          "passed": false,
+          "details": "Missing dependencies: service"
+        },
+        {
+          "name": "Configuration Files",
+          "passed": false,
+          "details": "Missing configuration files: performance-test-$(date +%Y%m%d-%H%M%S).json"
+        },
+        {
+          "name": "Security Validation",
+          "passed": true,
+          "details": "No security issues detected"
+        },
+        {
+          "name": "Dry-run Simulation",
+          "passed": true,
+          "details": "Dry-run simulation completed successfully"
+        }
+      ],
+      "passed": 4,
+      "failed": 3,
+      "timestamp": "2025-08-04T12:29:14.135Z"
+    },
+    {
+      "name": "LOI Conversion Script",
+      "path": "scripts/convert-pilot-to-loi.sh",
+      "tests": [
+        {
+          "name": "File Accessibility",
+          "passed": true,
+          "details": "File exists and is readable (6746 bytes)"
+        },
+        {
+          "name": "Syntax Validation",
+          "passed": true,
+          "details": "Script syntax is valid"
+        },
+        {
+          "name": "Script Permissions",
+          "passed": false,
+          "details": "Script lacks execute permissions"
+        },
+        {
+          "name": "Dependencies Check",
+          "passed": false,
+          "details": "Missing dependencies: service"
+        },
+        {
+          "name": "Configuration Files",
+          "passed": false,
+          "details": "Missing configuration files: loi-conversion-$(date +%Y%m%d-%H%M%S).json"
+        },
+        {
+          "name": "Security Validation",
+          "passed": true,
+          "details": "No security issues detected"
+        },
+        {
+          "name": "Dry-run Simulation",
+          "passed": true,
+          "details": "Dry-run simulation completed successfully"
+        }
+      ],
+      "passed": 4,
+      "failed": 3,
+      "timestamp": "2025-08-04T12:29:14.154Z"
+    }
+  ]
+}

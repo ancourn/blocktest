@@ -1,0 +1,221 @@
+{
+  "test_timestamp": "2025-08-04T12:17:48.880Z",
+  "test_configuration": {
+    "quantumAlgorithms": [
+      {
+        "name": "ML-DSA",
+        "type": "signature",
+        "securityLevel": 256,
+        "nistLevel": 5
+      },
+      {
+        "name": "SPHINCS+",
+        "type": "signature",
+        "securityLevel": 256,
+        "nistLevel": 5
+      },
+      {
+        "name": "Falcon",
+        "type": "signature",
+        "securityLevel": 256,
+        "nistLevel": 5
+      },
+      {
+        "name": "Kyber",
+        "type": "encryption",
+        "securityLevel": 256,
+        "nistLevel": 5
+      },
+      {
+        "name": "Dilithium",
+        "type": "signature",
+        "securityLevel": 256,
+        "nistLevel": 5
+      }
+    ],
+    "testVectors": 100,
+    "securityThresholds": {
+      "signatureTime": 100,
+      "verificationTime": 50,
+      "encryptionTime": 200,
+      "decryptionTime": 150,
+      "securityScore": 90
+    },
+    "attackScenarios": [
+      "quantum_computer",
+      "side_channel",
+      "timing_analysis",
+      "fault_injection"
+    ]
+  },
+  "test_results": {
+    "passed": 16,
+    "failed": 0,
+    "success_rate": "100.0",
+    "errors": []
+  },
+  "quantum_metrics": {
+    "average_signature_time": 69.59830091188422,
+    "average_verification_time": 26.70939772831951,
+    "average_encryption_time": 55.06287797959814,
+    "average_decryption_time": 96.66424347193369,
+    "average_security_score": 98.29652842543024,
+    "detailed_metrics": {
+      "signatureTimes": [
+        82.7883098358086,
+        58.57577291092202,
+        84.77515666694096,
+        52.253964233865275
+      ],
+      "verificationTimes": [
+        18.1228520038335,
+        40.36595616570739,
+        15.526331400852982,
+        32.82245134288416
+      ],
+      "encryptionTimes": [
+        55.06287797959814
+      ],
+      "decryptionTimes": [
+        96.66424347193369
+      ],
+      "securityScores": [
+        99.29913477881705,
+        98.99596801467405,
+        98.09403103067388,
+        97.9167752984348,
+        97.33301883972115,
+        98.60468194376331,
+        98.90073987595787,
+        98.41192122925469,
+        96.3850769313899,
+        99.02393631161571
+      ]
+    }
+  },
+  "algorithm_performance": [
+    {
+      "name": "ML-DSA",
+      "type": "signature",
+      "securityLevel": 256,
+      "nistLevel": 5,
+      "status": "active",
+      "performance": {
+        "signatureTime": 76,
+        "verificationTime": 28,
+        "keySize": 256,
+        "nistCompliant": true
+      },
+      "security": {
+        "quantumResistance": "high",
+        "classicalSecurity": 244,
+        "sideChannelResistance": "high"
+      }
+    },
+    {
+      "name": "SPHINCS+",
+      "type": "signature",
+      "securityLevel": 256,
+      "nistLevel": 5,
+      "status": "active",
+      "performance": {
+        "signatureTime": 85,
+        "verificationTime": 16,
+        "keySize": 256,
+        "nistCompliant": true
+      },
+      "security": {
+        "quantumResistance": "high",
+        "classicalSecurity": 250,
+        "sideChannelResistance": "high"
+      }
+    },
+    {
+      "name": "Falcon",
+      "type": "signature",
+      "securityLevel": 256,
+      "nistLevel": 5,
+      "status": "active",
+      "performance": {
+        "signatureTime": 95,
+        "verificationTime": 22,
+        "keySize": 256,
+        "nistCompliant": true
+      },
+      "security": {
+        "quantumResistance": "high",
+        "classicalSecurity": 241,
+        "sideChannelResistance": "high"
+      }
+    },
+    {
+      "name": "Kyber",
+      "type": "encryption",
+      "securityLevel": 256,
+      "nistLevel": 5,
+      "status": "active",
+      "performance": {
+        "signatureTime": 84,
+        "verificationTime": 16,
+        "keySize": 256,
+        "nistCompliant": true
+      },
+      "security": {
+        "quantumResistance": "high",
+        "classicalSecurity": 253,
+        "sideChannelResistance": "high"
+      }
+    },
+    {
+      "name": "Dilithium",
+      "type": "signature",
+      "securityLevel": 256,
+      "nistLevel": 5,
+      "status": "active",
+      "performance": {
+        "signatureTime": 39,
+        "verificationTime": 11,
+        "keySize": 256,
+        "nistCompliant": true
+      },
+      "security": {
+        "quantumResistance": "high",
+        "classicalSecurity": 258,
+        "sideChannelResistance": "high"
+      }
+    }
+  ],
+  "security_validation": [
+    {
+      "scenario": "quantum_computer",
+      "resistance": "high",
+      "securityScore": 96.01151585470436,
+      "vulnerabilityScore": 0.1
+    },
+    {
+      "scenario": "side_channel",
+      "resistance": "high",
+      "securityScore": 94.74347781151388,
+      "vulnerabilityScore": 0.05
+    },
+    {
+      "scenario": "timing_analysis",
+      "resistance": "high",
+      "securityScore": 98.81538124477996,
+      "vulnerabilityScore": 0.03
+    },
+    {
+      "scenario": "fault_injection",
+      "resistance": "medium",
+      "securityScore": 93.37716631274512,
+      "vulnerabilityScore": 0.15
+    }
+  ],
+  "security_evaluation": {
+    "signature_time_ok": true,
+    "verification_time_ok": true,
+    "encryption_time_ok": true,
+    "decryption_time_ok": true,
+    "security_score_ok": true
+  }
+}

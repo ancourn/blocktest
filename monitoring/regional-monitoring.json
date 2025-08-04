@@ -1,0 +1,37 @@
+{
+  "regional_monitoring": {
+    "enabled": true,
+    "regions": [
+      "tokyo", "singapore", "seoul", "mumbai", "hong_kong"
+    ],
+    "metrics": {
+      "latency": {
+        "collection_interval": 30,
+        "alert_threshold": 100,
+        "critical_threshold": 120
+      },
+      "throughput": {
+        "collection_interval": 60,
+        "alert_threshold": 100,
+        "critical_threshold": 50
+      },
+      "availability": {
+        "collection_interval": 300,
+        "alert_threshold": 99.0,
+        "critical_threshold": 95.0
+      }
+    },
+    "alerting": {
+      "enabled": true,
+      "channels": ["email", "slack", "webhook"],
+      "severity_levels": ["info", "warning", "critical"]
+    },
+    "dashboards": {
+      "regional_overview": true,
+      "latency_heatmap": true,
+      "network_topology": true,
+      "quantum_security": true
+    }
+  },
+  "last_updated": "2025-08-04T12:22:55Z"
+}

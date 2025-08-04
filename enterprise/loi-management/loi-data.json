@@ -1,0 +1,151 @@
+{
+  "lois": [
+    {
+      "id": "loi_001",
+      "pilot_id": "pilot_001",
+      "company_name": "Global Bank Inc.",
+      "status": "awaiting_signature",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T11:45:00Z",
+      "template_type": "standard",
+      "content": {
+        "parties": {
+          "company": {
+            "name": "Global Bank Inc.",
+            "type": "corporation",
+            "jurisdiction": "United States",
+            "address": "123 Financial District, New York, NY 10005"
+          },
+          "kaldrix": {
+            "representative": {
+              "name": "John Smith",
+              "title": "VP of Business Development",
+              "email": "john.smith@kaldrix.com",
+              "phone": "+1-555-0123"
+            }
+          }
+        },
+        "pilot_details": {
+          "duration": "90 days",
+          "use_cases": [
+            "Cross-border payment settlement",
+            "Quantum-secure asset tokenization",
+            "Regulatory reporting automation"
+          ],
+          "success_criteria": [
+            "Process 10,000+ transactions with quantum security",
+            "Achieve <100ms latency for cross-border payments",
+            "Pass regulatory compliance audit",
+            "Integrate with existing banking systems"
+          ],
+          "performance_targets": {
+            "tps": 10000,
+            "latency": 100,
+            "uptime": 99.9,
+            "quantum_score": 95
+          }
+        },
+        "commercial_terms": {
+          "pilot_fee": "No cost during pilot period",
+          "implementation_costs": [
+            "Internal resource allocation",
+            "Integration expenses",
+            "Third-party services"
+          ],
+          "post_pilot_licensing": "To be negotiated based on usage and requirements"
+        },
+        "representatives": {
+          "company": {
+            "name": "Sarah Johnson",
+            "title": "CTO",
+            "email": "sarah.johnson@globalbank.com",
+            "phone": "+1-555-0123"
+          },
+          "kaldrix": {
+            "name": "John Smith",
+            "title": "VP of Business Development",
+            "email": "john.smith@kaldrix.com",
+            "phone": "+1-555-0123"
+          }
+        },
+        "signatures": {
+          "company": {
+            "signatory_name": "Sarah Johnson",
+            "signatory_title": "CTO"
+          },
+          "kaldrix": {
+            "signatory_name": "John Smith",
+            "signatory_title": "VP of Business Development"
+          }
+        }
+      },
+      "workflow": {
+        "current_status": "awaiting_signature",
+        "history": [
+          {
+            "status": "draft",
+            "timestamp": "2024-01-15T10:30:00Z",
+            "notes": "LOI created from pilot data",
+            "updated_by": "system"
+          },
+          {
+            "status": "sent_to_company",
+            "timestamp": "2024-01-15T10:35:00Z",
+            "notes": "LOI sent to Global Bank Inc. for review",
+            "updated_by": "john.smith@kaldrix.com"
+          },
+          {
+            "status": "under_review",
+            "timestamp": "2024-01-15T11:00:00Z",
+            "notes": "Global Bank legal team reviewing LOI",
+            "updated_by": "sarah.johnson@globalbank.com"
+          },
+          {
+            "status": "negotiation",
+            "timestamp": "2024-01-15T11:20:00Z",
+            "notes": "Minor terms negotiation in progress",
+            "updated_by": "john.smith@kaldrix.com"
+          },
+          {
+            "status": "approved_legal",
+            "timestamp": "2024-01-15T11:40:00Z",
+            "notes": "Legal terms approved by both parties",
+            "updated_by": "system"
+          },
+          {
+            "status": "awaiting_signature",
+            "timestamp": "2024-01-15T11:45:00Z",
+            "notes": "Ready for executive signatures",
+            "updated_by": "john.smith@kaldrix.com"
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_lois": 1,
+    "by_status": {
+      "draft": 0,
+      "sent_to_company": 0,
+      "under_review": 0,
+      "negotiation": 0,
+      "approved_legal": 0,
+      "awaiting_signature": 1,
+      "signed": 0,
+      "active": 0,
+      "completed": 0,
+      "terminated": 0
+    },
+    "conversion_rate": {
+      "pilots_with_loi": 1,
+      "total_pilots": 3,
+      "percentage": 33.33
+    },
+    "next_actions": [
+      "Follow up with Global Bank Inc. for LOI signature",
+      "Send LOI to LogiTech Solutions",
+      "Prepare LOI for SecureID Systems"
+    ]
+  },
+  "last_updated": "2024-01-15T11:45:00Z"
+}

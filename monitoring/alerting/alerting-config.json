@@ -1,0 +1,288 @@
+{
+  "alerting_config": {
+    "enabled": true,
+    "check_interval": 30000,
+    "notification_channels": {
+      "email": {
+        "enabled": true,
+        "recipients": [
+          "devops@kaldrix.com",
+          "engineering@kaldrix.com"
+        ],
+        "template": "performance_alert"
+      },
+      "webhook": {
+        "enabled": true,
+        "url": "https://hooks.slack.com/services/XXXXX",
+        "template": "slack_alert"
+      },
+      "console": {
+        "enabled": true,
+        "log_level": "warn"
+      }
+    },
+    "alert_rules": [
+      {
+        "id": "tps_drop",
+        "name": "TPS Below Threshold",
+        "description": "Alert when TPS drops below threshold",
+        "metric": "tps_current",
+        "condition": "below",
+        "threshold": 1500,
+        "duration": 300000,
+        "severity": "high",
+        "enabled": true
+      },
+      {
+        "id": "latency_spike",
+        "name": "High Latency Detected",
+        "description": "Alert when latency exceeds threshold",
+        "metric": "latency_p95",
+        "condition": "above",
+        "threshold": 200,
+        "duration": 60000,
+        "severity": "medium",
+        "enabled": true
+      },
+      {
+        "id": "cpu_high",
+        "name": "High CPU Usage",
+        "description": "Alert when CPU usage exceeds threshold",
+        "metric": "cpu_utilization",
+        "condition": "above",
+        "threshold": 90,
+        "duration": 600000,
+        "severity": "medium",
+        "enabled": true
+      },
+      {
+        "id": "memory_high",
+        "name": "High Memory Usage",
+        "description": "Alert when memory usage exceeds threshold",
+        "metric": "memory_usage",
+        "condition": "above",
+        "threshold": 85,
+        "duration": 600000,
+        "severity": "medium",
+        "enabled": true
+      },
+      {
+        "id": "error_rate_high",
+        "name": "High Error Rate",
+        "description": "Alert when error rate exceeds threshold",
+        "metric": "error_rate",
+        "condition": "above",
+        "threshold": 1,
+        "duration": 300000,
+        "severity": "high",
+        "enabled": true
+      },
+      {
+        "id": "node_count_low",
+        "name": "Low Node Count",
+        "description": "Alert when active node count drops below threshold",
+        "metric": "active_nodes",
+        "condition": "below",
+        "threshold": 3,
+        "duration": 120000,
+        "severity": "high",
+        "enabled": true
+      },
+      {
+        "id": "quantum_score_low",
+        "name": "Low Quantum Security Score",
+        "description": "Alert when quantum security score drops below threshold",
+        "metric": "quantum_security_score",
+        "condition": "below",
+        "threshold": 90,
+        "duration": 300000,
+        "severity": "high",
+        "enabled": true
+      },
+      {
+        "id": "network_bandwidth_low",
+        "name": "Low Network Bandwidth",
+        "description": "Alert when network bandwidth drops below threshold",
+        "metric": "network_bandwidth",
+        "condition": "below",
+        "threshold": 20,
+        "duration": 180000,
+        "severity": "medium",
+        "enabled": true
+      }
+    ],
+    "alert_templates": {
+      "email": {
+        "subject": "🚨 KALDRIX Performance Alert: {alert_name}",
+        "body": "Alert Details:\n\nAlert: {alert_name}\nSeverity: {severity}\nMetric: {metric}\nCurrent Value: {current_value}\nThreshold: {threshold}\nDuration: {duration}\nTimestamp: {timestamp}\n\nDescription: {description}\n\nRecommended Actions:\n{recommended_actions}\n\nThis is an automated alert from the KALDRIX monitoring system."
+      },
+      "slack": {
+        "text": "🚨 *KALDRIX Performance Alert*",
+        "attachments": [
+          {
+            "color": "#ff0000",
+            "title": "{alert_name}",
+            "fields": [
+              {
+                "title": "Severity",
+                "value": "{severity}",
+                "short": true
+              },
+              {
+                "title": "Metric",
+                "value": "{metric}",
+                "short": true
+              },
+              {
+                "title": "Current Value",
+                "value": "{current_value}",
+                "short": true
+              },
+              {
+                "title": "Threshold",
+                "value": "{threshold}",
+                "short": true
+              },
+              {
+                "title": "Duration",
+                "value": "{duration}",
+                "short": true
+              }
+            ],
+            "text": "{description}\n\n*Recommended Actions:*\n{recommended_actions}",
+            "footer": "KALDRIX Monitoring System",
+            "ts": "{timestamp}"
+          }
+        ]
+      },
+      "console": {
+        "format": "[{timestamp}] [{severity}] {alert_name}: {metric} = {current_value} (threshold: {threshold}) - {description}"
+      }
+    },
+    "alert_suppression": {
+      "enabled": true,
+      "suppression_duration": 3600000,
+      "grouping": {
+        "enabled": true,
+        "group_by": ["alert_id", "metric"],
+        "group_duration": 300000
+      }
+    },
+    "alert_escalation": {
+      "enabled": true,
+      "levels": [
+        {
+          "level": 1,
+          "duration": 300000,
+          "actions": ["email", "console"]
+        },
+        {
+          "level": 2,
+          "duration": 900000,
+          "actions": ["email", "webhook", "console"]
+        },
+        {
+          "level": 3,
+          "duration": 1800000,
+          "actions": ["email", "webhook", "console", "sms"]
+        }
+      ]
+    }
+  },
+  "metrics_config": {
+    "collection_interval": 10000,
+    "retention_period": 604800000,
+    "aggregation": {
+      "enabled": true,
+      "interval": 60000,
+      "functions": ["avg", "max", "min", "sum", "count"]
+    },
+    "metrics_to_collect": [
+      "tps_current",
+      "latency_p95",
+      "latency_p99",
+      "cpu_utilization",
+      "memory_usage",
+      "network_bandwidth",
+      "error_rate",
+      "active_nodes",
+      "quantum_security_score",
+      "queue_depth",
+      "success_rate"
+    ]
+  },
+  "dashboard_config": {
+    "enabled": true,
+    "refresh_interval": 30000,
+    "panels": [
+      {
+        "id": "tps_panel",
+        "title": "Transactions Per Second",
+        "type": "timeseries",
+        "metrics": ["tps_current"],
+        "thresholds": [1500, 2000]
+      },
+      {
+        "id": "latency_panel",
+        "title": "Transaction Latency",
+        "type": "timeseries",
+        "metrics": ["latency_p95", "latency_p99"],
+        "thresholds": [100, 200]
+      },
+      {
+        "id": "resource_panel",
+        "title": "System Resources",
+        "type": "gauge",
+        "metrics": ["cpu_utilization", "memory_usage"],
+        "thresholds": [85, 90]
+      },
+      {
+        "id": "quantum_panel",
+        "title": "Quantum Security",
+        "type": "singlestat",
+        "metrics": ["quantum_security_score"],
+        "thresholds": [90, 95]
+      }
+    ]
+  },
+  "reporting_config": {
+    "enabled": true,
+    "schedules": [
+      {
+        "name": "daily_summary",
+        "cron": "0 9 * * *",
+        "format": "pdf",
+        "recipients": ["management@kaldrix.com", "engineering@kaldrix.com"]
+      },
+      {
+        "name": "weekly_performance",
+        "cron": "0 9 * * 1",
+        "format": "pdf",
+        "recipients": ["stakeholders@kaldrix.com"]
+      },
+      {
+        "name": "monthly_summary",
+        "cron": "0 9 1 * *",
+        "format": "pdf",
+        "recipients": ["executives@kaldrix.com"]
+      }
+    ]
+  },
+  "integration_config": {
+    "prometheus": {
+      "enabled": true,
+      "port": 9090,
+      "path": "/metrics"
+    },
+    "grafana": {
+      "enabled": true,
+      "url": "http://localhost:3000",
+      "api_key": "grafana_api_key"
+    },
+    "slack": {
+      "enabled": true,
+      "webhook_url": "https://hooks.slack.com/services/XXXXX"
+    }
+  },
+  "last_updated": "2024-01-15T12:00:00Z"
+}
