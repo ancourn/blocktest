@@ -1,0 +1,383 @@
+{
+  "timestamp": "2025-08-04T12:19:29.198Z",
+  "duration": 67,
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "successRate": "100.00"
+  },
+  "categories": [
+    {
+      "category": "User Registration",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "User Registration",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 201,
+            "data": {
+              "success": true,
+              "data": {
+                "userId": "user_fmov9ckdw",
+                "email": "test@example.com",
+                "walletAddress": "0x8fda1a66c33c3",
+                "createdAt": "2025-08-04T12:19:29.167Z"
+              }
+            },
+            "responseTime": 38
+          },
+          "timestamp": "2025-08-04T12:19:29.173Z"
+        }
+      ]
+    },
+    {
+      "category": "Wallet Creation",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Wallet Creation",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "walletId": "wallet_d3al1vnqw",
+                "address": "0x7ec7c1580bd66",
+                "publicKey": "pub_cvs0m0vubdl",
+                "balance": 1000,
+                "quantumEnabled": true,
+                "securityLevel": "maximum",
+                "createdAt": "2025-08-04T12:19:29.176Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.176Z"
+        },
+        {
+          "name": "Wallet Balance Check",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "balance": 1000,
+                "pending": 0,
+                "staked": 500,
+                "available": 500,
+                "lastUpdated": "2025-08-04T12:19:29.178Z"
+              }
+            },
+            "responseTime": 1
+          },
+          "timestamp": "2025-08-04T12:19:29.179Z"
+        }
+      ]
+    },
+    {
+      "category": "Transaction Flow",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Send Transaction",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "transactionId": "tx_m553qzqsj",
+                "from": "0xa7d60a8bd71ce",
+                "to": "0x581e9cc57a848",
+                "amount": 100,
+                "fee": 1,
+                "status": "pending",
+                "quantumVerified": true,
+                "timestamp": "2025-08-04T12:19:29.181Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.181Z"
+        },
+        {
+          "name": "Check Transaction Status",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "transactionId": "tx_fi54rlfkn",
+                "status": "confirmed",
+                "confirmations": 6,
+                "blockNumber": 12345,
+                "gasUsed": 21000,
+                "timestamp": "2025-08-04T12:19:29.182Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.183Z"
+        },
+        {
+          "name": "Get Transaction History",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "transactions": [
+                  {
+                    "id": "tx_yoq2g2c06",
+                    "amount": 786,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_75ig0uh4w",
+                    "amount": 398,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_kfslhik9e",
+                    "amount": 453,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_0ush6otlh",
+                    "amount": 344,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_c74c2xmho",
+                    "amount": 226,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_r9hw0nnvc",
+                    "amount": 941,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_u5lemiezn",
+                    "amount": 797,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_x2x7zskk9",
+                    "amount": 631,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_4o5khawck",
+                    "amount": 905,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  },
+                  {
+                    "id": "tx_aj6pdk8yr",
+                    "amount": 162,
+                    "status": "confirmed",
+                    "timestamp": "2025-08-04T12:19:29.184Z"
+                  }
+                ]
+              }
+            },
+            "responseTime": 1
+          },
+          "timestamp": "2025-08-04T12:19:29.185Z"
+        }
+      ]
+    },
+    {
+      "category": "Smart Contract Interaction",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Deploy Smart Contract",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "contractAddress": "0xdbfb417178c19",
+                "abi": [],
+                "bytecode": "0x66a58f29fe009",
+                "deploymentTx": "tx_pk86xgmdg",
+                "gasUsed": 2000000,
+                "status": "deployed",
+                "timestamp": "2025-08-04T12:19:29.187Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.187Z"
+        },
+        {
+          "name": "Call Smart Contract Method",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "result": "0xb4425f9ac7f22",
+                "gasUsed": 50000,
+                "status": "success",
+                "logs": [],
+                "timestamp": "2025-08-04T12:19:29.188Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.189Z"
+        },
+        {
+          "name": "List Deployed Contracts",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "contracts": [
+                  {
+                    "address": "0xd1fd3b52b6711",
+                    "name": "TestContract",
+                    "version": "1.0.0",
+                    "deployedAt": "2025-08-04T12:19:29.190Z"
+                  },
+                  {
+                    "address": "0x7ac0b83effdc3",
+                    "name": "TestContract",
+                    "version": "1.0.0",
+                    "deployedAt": "2025-08-04T12:19:29.190Z"
+                  },
+                  {
+                    "address": "0x969cec7b42752",
+                    "name": "TestContract",
+                    "version": "1.0.0",
+                    "deployedAt": "2025-08-04T12:19:29.190Z"
+                  },
+                  {
+                    "address": "0x889e38c98435",
+                    "name": "TestContract",
+                    "version": "1.0.0",
+                    "deployedAt": "2025-08-04T12:19:29.190Z"
+                  },
+                  {
+                    "address": "0x63b3d8fb6206d",
+                    "name": "TestContract",
+                    "version": "1.0.0",
+                    "deployedAt": "2025-08-04T12:19:29.190Z"
+                  }
+                ]
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.191Z"
+        }
+      ]
+    },
+    {
+      "category": "Quantum Features",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "tests": [
+        {
+          "name": "Generate Quantum Keys",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "publicKey": "pub_tuobqeo963",
+                "privateKey": "priv_f6xln19guzn",
+                "algorithm": "ML-DSA",
+                "securityLevel": 256,
+                "keySize": 2048,
+                "timestamp": "2025-08-04T12:19:29.194Z"
+              }
+            },
+            "responseTime": 3
+          },
+          "timestamp": "2025-08-04T12:19:29.195Z"
+        },
+        {
+          "name": "Quantum Sign Transaction",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "signature": "sig_8l8pbv5mczs",
+                "messageHash": "hash_06c97dd0f072a",
+                "algorithm": "ML-DSA",
+                "verificationStatus": "valid",
+                "timestamp": "2025-08-04T12:19:29.196Z"
+              }
+            },
+            "responseTime": 2
+          },
+          "timestamp": "2025-08-04T12:19:29.197Z"
+        },
+        {
+          "name": "Quantum Verify Signature",
+          "passed": true,
+          "details": {
+            "success": true,
+            "status": 200,
+            "data": {
+              "success": true,
+              "data": {
+                "isValid": true,
+                "algorithm": "ML-DSA",
+                "securityScore": 98,
+                "timestamp": "2025-08-04T12:19:29.197Z"
+              }
+            },
+            "responseTime": 1
+          },
+          "timestamp": "2025-08-04T12:19:29.198Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "network": {
+    "name": "kaldrix-mini-testnet",
+    "networkId": "kaldrix-test-1",
+    "chainId": 1337,
+    "genesis": {
+      "timestamp": 1640995200000,
+      "validators": [
+        "node-validator-1",
+        "node-validator-2",
+        "node-validator-3"
+      ],
+      "initialSupply": "1000000000",
+      "maxSupply": "2100000000"
+    }
+  },
+  "node": {
+    "defaultPort": 3000,
+    "maxPeers": 50,
+    "minPeers": 3,
+    "syncMode": "full",
+    "pruning": false,
+    "roles": {
+      "validator": {
+        "stakeRequirement": "10000",
+        "rewardShare": 0.6,
+        "unbondingPeriod": 604800
+      },
+      "miner": {
+        "hashPowerThreshold": 1000,
+        "rewardShare": 0.3,
+        "blockReward": "10"
+      },
+      "observer": {
+        "apiAccess": true,
+        "dataRetention": 2592000
+      }
+    }
+  },
+  "consensus": {
+    "type": "quantum-dag",
+    "blockTime": 5000,
+    "finality": 15000,
+    "maxBlockSize": "1048576",
+    "maxGasLimit": 8000000,
+    "minGasPrice": "1000000000",
+    "epochLength": 86400,
+    "validatorSetSize": 21,
+    "unbondingPeriod": 604800
+  },
+  "sharding": {
+    "enabled": true,
+    "shardCount": 4,
+    "crossShardGasLimit": 2000000,
+    "receiptsRootTimeout": 5000,
+    "maxTransactionsPerShard": 1000,
+    "validationTimeout": 30000,
+    "crossShardTimeout": 15000
+  },
+  "quantum": {
+    "enabled": true,
+    "algorithms": {
+      "ML-DSA": {
+        "keySize": 2560,
+        "signatureSize": 2420,
+        "securityLevel": 256
+      },
+      "SPHINCS+": {
+        "keySize": 64,
+        "signatureSize": 7856,
+        "securityLevel": 256
+      },
+      "Falcon": {
+        "keySize": 1792,
+        "signatureSize": 660,
+        "securityLevel": 256
+      },
+      "Bulletproofs": {
+        "keySize": 32,
+        "proofSize": 288,
+        "securityLevel": 128
+      }
+    },
+    "keyRotation": {
+      "enabled": true,
+      "rotationInterval": 604800,
+      "backupKeys": 3
+    }
+  },
+  "gpu": {
+    "enabled": true,
+    "maxConcurrentTasks": 8,
+    "memoryLimit": 4096,
+    "preferredDevice": 0,
+    "algorithms": [
+      "ML-DSA",
+      "SPHINCS+",
+      "Falcon",
+      "Bulletproofs"
+    ]
+  },
+  "batching": {
+    "enabled": true,
+    "maxBatchSize": 100,
+    "batchTimeout": 1000,
+    "maxBatchWaitTime": 5000,
+    "enableSignatureAggregation": true,
+    "aggregationAlgorithm": "schnorr"
+  },
+  "tps": {
+    "currentTarget": 1000,
+    "milestones": [1000, 10000, 30000, 75000],
+    "autoScaling": true,
+    "monitoringInterval": 10000,
+    "scalingThreshold": 0.8
+  },
+  "reliability": {
+    "failover": {
+      "heartbeatInterval": 5000,
+      "responseTimeout": 10000,
+      "maxRetries": 3,
+      "failoverThreshold": 2,
+      "consensusCatchupTimeout": 30000
+    },
+    "availability": {
+      "slaTarget": 99.99,
+      "checkInterval": 5,
+      "incidentTimeout": 300,
+      "alertCooldown": 60,
+      "retentionPeriod": 7,
+      "enableNotifications": true
+    },
+    "failureSimulation": {
+      "maxConcurrentScenarios": 3,
+      "autoRecovery": true,
+      "recoveryDelay": 30,
+      "monitoringInterval": 10,
+      "chaosEnabled": false
+    },
+    "stressTest": {
+      "defaultDuration": 5,
+      "defaultIntensity": "MEDIUM",
+      "defaultTargetTPS": 1000,
+      "failureRate": 0.1,
+      "autoScale": true,
+      "metricsInterval": 5
+    }
+  },
+  "api": {
+    "enabled": true,
+    "port": 8080,
+    "websocket": {
+      "enabled": true,
+      "port": 8081,
+      "cors": {
+        "origin": "*",
+        "methods": ["GET", "POST"]
+      }
+    },
+    "rateLimit": {
+      "enabled": true,
+      "requests": 100,
+      "windowMs": 60000
+    }
+  },
+  "storage": {
+    "type": "leveldb",
+    "path": "./data",
+    "maxOpenFiles": 1000,
+    "cacheSize": 536870912,
+    "compression": true,
+    "backup": {
+      "enabled": true,
+      "interval": 86400,
+      "retention": 7
+    }
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "outputs": ["console", "file"],
+    "file": {
+      "path": "./logs",
+      "maxSize": "10m",
+      "maxFiles": 5
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": {
+      "enabled": true,
+      "port": 9090,
+      "endpoint": "/metrics"
+    },
+    "tracing": {
+      "enabled": true,
+      "service": "kaldrix-node",
+      "sampleRate": 0.1
+    },
+    "health": {
+      "enabled": true,
+      "endpoint": "/health"
+    }
+  },
+  "security": {
+    "tls": {
+      "enabled": false,
+      "certFile": "./certs/cert.pem",
+      "keyFile": "./certs/key.pem"
+    },
+    "authentication": {
+      "enabled": false,
+      "type": "jwt",
+      "secret": "",
+      "expiry": 3600
+    },
+    "authorization": {
+      "enabled": false,
+      "roles": ["admin", "user", "readonly"]
+    }
+  }
+}

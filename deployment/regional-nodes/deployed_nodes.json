@@ -1,0 +1,170 @@
+[
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754300869\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:47:49Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:47:59Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754300879\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:47:59Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:48:09Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "seoul",
+    "config": "{\n  \"node_id\": \"kaldrix_seoul_1754300889\",\n  \"region\": \"seoul\",\n  \"coordinates\": {\n    \"latitude\": 37.5665,\n    \"longitude\": 126.9780\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:48:09Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:48:19Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "mumbai",
+    "config": "{\n  \"node_id\": \"kaldrix_mumbai_1754300899\",\n  \"region\": \"mumbai\",\n  \"coordinates\": {\n    \"latitude\": 19.0760,\n    \"longitude\": 72.8777\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:48:19Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:48:29Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "hong_kong",
+    "config": "{\n  \"node_id\": \"kaldrix_hong_kong_1754300909\",\n  \"region\": \"hong_kong\",\n  \"coordinates\": {\n    \"latitude\": 22.3193,\n    \"longitude\": 114.1694\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:48:29Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:48:39Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754300990\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:49:50Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:50:00Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754301000\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:50:00Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:50:10Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "seoul",
+    "config": "{\n  \"node_id\": \"kaldrix_seoul_1754301010\",\n  \"region\": \"seoul\",\n  \"coordinates\": {\n    \"latitude\": 37.5665,\n    \"longitude\": 126.9780\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:50:10Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:50:20Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "mumbai",
+    "config": "{\n  \"node_id\": \"kaldrix_mumbai_1754301020\",\n  \"region\": \"mumbai\",\n  \"coordinates\": {\n    \"latitude\": 19.0760,\n    \"longitude\": 72.8777\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:50:20Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:50:30Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "hong_kong",
+    "config": "{\n  \"node_id\": \"kaldrix_hong_kong_1754301030\",\n  \"region\": \"hong_kong\",\n  \"coordinates\": {\n    \"latitude\": 22.3193,\n    \"longitude\": 114.1694\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T09:50:30Z\"\n}",
+    "deployment_timestamp": "2025-08-04T09:50:40Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754309986\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:19:46Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:19:56Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754309996\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:19:56Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:20:06Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "seoul",
+    "config": "{\n  \"node_id\": \"kaldrix_seoul_1754310006\",\n  \"region\": \"seoul\",\n  \"coordinates\": {\n    \"latitude\": 37.5665,\n    \"longitude\": 126.9780\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:20:06Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:20:16Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "mumbai",
+    "config": "{\n  \"node_id\": \"kaldrix_mumbai_1754310016\",\n  \"region\": \"mumbai\",\n  \"coordinates\": {\n    \"latitude\": 19.0760,\n    \"longitude\": 72.8777\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:20:16Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:20:26Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "hong_kong",
+    "config": "{\n  \"node_id\": \"kaldrix_hong_kong_1754310026\",\n  \"region\": \"hong_kong\",\n  \"coordinates\": {\n    \"latitude\": 22.3193,\n    \"longitude\": 114.1694\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:20:26Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:20:36Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754310107\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:21:47Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:21:57Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754310117\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:21:57Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:22:07Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "seoul",
+    "config": "{\n  \"node_id\": \"kaldrix_seoul_1754310127\",\n  \"region\": \"seoul\",\n  \"coordinates\": {\n    \"latitude\": 37.5665,\n    \"longitude\": 126.9780\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:22:07Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:22:17Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "mumbai",
+    "config": "{\n  \"node_id\": \"kaldrix_mumbai_1754310137\",\n  \"region\": \"mumbai\",\n  \"coordinates\": {\n    \"latitude\": 19.0760,\n    \"longitude\": 72.8777\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:22:17Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:22:27Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "hong_kong",
+    "config": "{\n  \"node_id\": \"kaldrix_hong_kong_1754310147\",\n  \"region\": \"hong_kong\",\n  \"coordinates\": {\n    \"latitude\": 22.3193,\n    \"longitude\": 114.1694\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:22:27Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:22:37Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754310229\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:23:49Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:23:59Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754310239\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:23:59Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:24:09Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "tokyo",
+    "config": "{\n  \"node_id\": \"kaldrix_tokyo_1754310350\",\n  \"region\": \"tokyo\",\n  \"coordinates\": {\n    \"latitude\": 35.6762,\n    \"longitude\": 139.6503\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:25:50Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:26:00Z",
+    "status": "deployed",
+    "health_check": "pending"
+  },
+  {
+    "region": "singapore",
+    "config": "{\n  \"node_id\": \"kaldrix_singapore_1754310360\",\n  \"region\": \"singapore\",\n  \"coordinates\": {\n    \"latitude\": 1.3521,\n    \"longitude\": 103.8198\n  },\n  \"network_config\": {\n    \"listen_port\": 8443,\n    \"max_connections\": 10000,\n    \"enable_tls\": true,\n    \"quantum_encryption\": true\n  },\n  \"blockchain_config\": {\n    \"network_id\": \"kaldrix_mainnet\",\n    \"sync_mode\": \"fast\",\n    \"enable_quantum_features\": true,\n    \"quantum_algorithms\": [\"ML-DSA\", \"SPHINCS+\", \"Falcon\"]\n  },\n  \"monitoring_config\": {\n    \"enable_metrics\": true,\n    \"metrics_port\": 9090,\n    \"enable_logging\": true,\n    \"log_level\": \"info\"\n  },\n  \"deployment_timestamp\": \"2025-08-04T12:26:00Z\"\n}",
+    "deployment_timestamp": "2025-08-04T12:26:10Z",
+    "status": "deployed",
+    "health_check": "pending"
+  }
+]

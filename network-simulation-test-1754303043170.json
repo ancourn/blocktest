@@ -1,0 +1,186 @@
+{
+  "test_timestamp": "2025-08-04T10:24:03.170Z",
+  "test_configuration": {
+    "regionalNodes": [
+      {
+        "name": "Tokyo",
+        "location": "Asia-Pacific",
+        "latency": 88,
+        "bandwidth": 1000
+      },
+      {
+        "name": "Singapore",
+        "location": "Asia-Pacific",
+        "latency": 95,
+        "bandwidth": 950
+      },
+      {
+        "name": "Seoul",
+        "location": "Asia-Pacific",
+        "latency": 82,
+        "bandwidth": 1100
+      },
+      {
+        "name": "Mumbai",
+        "location": "Asia-Pacific",
+        "latency": 110,
+        "bandwidth": 800
+      },
+      {
+        "name": "Hong Kong",
+        "location": "Asia-Pacific",
+        "latency": 90,
+        "bandwidth": 1050
+      }
+    ],
+    "simulationDuration": 30000,
+    "concurrentConnections": 100,
+    "packetLoss": 0.01,
+    "networkJitter": 20,
+    "testScenarios": [
+      "normal",
+      "high_load",
+      "network_partition",
+      "node_failure"
+    ]
+  },
+  "test_results": {
+    "passed": 7,
+    "failed": 0,
+    "success_rate": "100.0",
+    "errors": []
+  },
+  "network_metrics": {
+    "average_latency": 125.75,
+    "average_throughput": 1600,
+    "average_packet_loss": 0.057499999999999996,
+    "average_availability": 94.9375,
+    "average_connections": 1136.75,
+    "detailed_metrics": {
+      "latency": [
+        88,
+        120,
+        200,
+        95
+      ],
+      "throughput": [
+        1800,
+        2200,
+        800,
+        1600
+      ],
+      "packetLoss": [
+        0.01,
+        0.05,
+        0.15,
+        0.02
+      ],
+      "availability": [
+        99.95,
+        99.8,
+        85,
+        95
+      ],
+      "connectionCount": [
+        1247,
+        1500,
+        800,
+        1000
+      ]
+    }
+  },
+  "node_status": [
+    {
+      "name": "Tokyo",
+      "location": "Asia-Pacific",
+      "status": "online",
+      "latency": 95.6863881496207,
+      "bandwidth": 1000,
+      "connections": 58
+    },
+    {
+      "name": "Singapore",
+      "location": "Asia-Pacific",
+      "status": "online",
+      "latency": 94.50406708433303,
+      "bandwidth": 950,
+      "connections": 56
+    },
+    {
+      "name": "Seoul",
+      "location": "Asia-Pacific",
+      "status": "online",
+      "latency": 83.69607705728308,
+      "bandwidth": 1100,
+      "connections": 59
+    },
+    {
+      "name": "Mumbai",
+      "location": "Asia-Pacific",
+      "status": "online",
+      "latency": 117.73642170654347,
+      "bandwidth": 800,
+      "connections": 51
+    },
+    {
+      "name": "Hong Kong",
+      "location": "Asia-Pacific",
+      "status": "online",
+      "latency": 98.97804366734346,
+      "bandwidth": 1050,
+      "connections": 31
+    }
+  ],
+  "scenario_results": {
+    "normal": {
+      "status": "success",
+      "metrics": {
+        "averageLatency": 88,
+        "throughput": 1800,
+        "packetLoss": 0.01,
+        "availability": 99.95,
+        "connectionCount": 1247
+      },
+      "simulationTime": 1146.949126695372
+    },
+    "high_load": {
+      "status": "success",
+      "metrics": {
+        "averageLatency": 120,
+        "throughput": 2200,
+        "packetLoss": 0.05,
+        "availability": 99.8,
+        "connectionCount": 1500
+      },
+      "simulationTime": 1262.5466539135036
+    },
+    "network_partition": {
+      "status": "success",
+      "metrics": {
+        "averageLatency": 200,
+        "throughput": 800,
+        "packetLoss": 0.15,
+        "availability": 85,
+        "connectionCount": 800
+      },
+      "simulationTime": 1374.4947581851984
+    },
+    "node_failure": {
+      "status": "success",
+      "metrics": {
+        "averageLatency": 95,
+        "throughput": 1600,
+        "packetLoss": 0.02,
+        "availability": 95,
+        "connectionCount": 1000
+      },
+      "simulationTime": 1011.9844227915981
+    }
+  },
+  "performance_evaluation": {
+    "latency_ok": false,
+    "throughput_ok": true,
+    "packet_loss_ok": false,
+    "availability_ok": false
+  }
+}
