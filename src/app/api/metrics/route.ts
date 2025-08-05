@@ -133,15 +133,15 @@ export async function GET(request: NextRequest) {
       
       default:
         // Return all metrics
-        const clusterStatus = failoverManager?.getClusterStatus();
-        const systemMetrics = availabilityMonitor?.getSystemMetrics();
-        const availabilityMetrics = availabilityMonitor?.getAvailabilityMetrics();
+        const clusterStatusDefault = failoverManager?.getClusterStatus();
+        const systemMetricsDefault = availabilityMonitor?.getSystemMetrics();
+        const availabilityMetricsDefault = availabilityMonitor?.getAvailabilityMetrics();
         
         return NextResponse.json({
-          cluster: clusterStatus,
+          cluster: clusterStatusDefault,
           availability: {
-            metrics: availabilityMetrics,
-            system: systemMetrics
+            metrics: availabilityMetricsDefault,
+            system: systemMetricsDefault
           },
           consensus: consensusCatchup?.getSyncState(),
           failures: {

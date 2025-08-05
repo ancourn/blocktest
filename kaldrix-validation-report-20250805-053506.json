@@ -1,0 +1,23 @@
+{
+  "testTimestamp": "2025-08-05T05:35:06+00:00",
+  "rpcUrl": "http://localhost:8545",
+  "results": {
+"rpcConnection": "FAIL",
+"peerCount": "ERROR",
+"syncStatus": "ERROR",
+"currentBlock": "ERROR",
+"networkId": "ERROR",
+"gasPrice": "ERROR",
+"accountCount": "0",
+"kaldrixConsensus": "STANDARD",
+"kaldrixSupply": "STANDARD",
+"transactionCount": "ERROR",
+"estimatedGas": "ERROR",
+"performanceTest": "COMPLETED",
+"securityTest": "COMPLETED",
+    "healthScore": 0,
+    "status": "POOR",
+    "testDuration": 4,
+    "timestamp": "2025-08-05T05:35:10+00:00"
+  }
+}
