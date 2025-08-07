@@ -1,0 +1,68 @@
+{
+  "name": "kaldrix-blockchain-api",
+  "version": "1.0.0",
+  "description": "REST and WebSocket API for KALDRIX blockchain operations",
+  "main": "server.ts",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "docs:generate": "swagger-jsdoc -d docs/openapi.yaml src/routes/*.ts",
+    "docs:serve": "swagger-ui-express -d docs/openapi.yaml -p 3002"
+  },
+  "keywords": [
+    "blockchain",
+    "api",
+    "rest",
+    "websocket",
+    "dag",
+    "consensus",
+    "quantum",
+    "kaldrix"
+  ],
+  "author": "KALDRIX Team",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/jwt": "^8.0.1",
+    "@fastify/rate-limit": "^9.1.0",
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^4.0.0",
+    "@fastify/websocket": "^8.3.1",
+    "fastify": "^4.26.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaldrix/kaldrix-blockchain-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaldrix/kaldrix-blockchain-api/issues"
+  },
+  "homepage": "https://kaldrix.io",
+  "files": [
+    "dist",
+    "docs",
+    "README.md"
+  ]
+}

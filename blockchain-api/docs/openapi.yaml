@@ -1,0 +1,879 @@
+openapi: 3.0.0
+info:
+  title: KALDRIX Blockchain API
+  description: REST and WebSocket API for KALDRIX blockchain operations including DAG management, quantum-resistant cryptography, and PBFT consensus
+  version: 1.0.0
+  contact:
+    name: KALDRIX Team
+    email: api@kaldrix.io
+    url: https://kaldrix.io
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+servers:
+  - url: http://localhost:3001
+    description: Development server
+  - url: https://api.kaldrix.io
+    description: Production server
+
+paths:
+  # Health Check
+  /health:
+    get:
+      summary: Health Check
+      description: Check API server health and blockchain status
+      tags:
+        - General
+      responses:
+        '200':
+          description: Server is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: healthy
+                  timestamp:
+                    type: string
+                    format: date-time
+                  blockchain:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                      metrics:
+                        type: object
+
+  # Authentication
+  /auth/login:
+    post:
+      summary: User Login
+      description: Authenticate user and return JWT tokens
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                  example: user123
+                password:
+                  type: string
+                  format: password
+                  example: securepassword123
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                  refreshToken:
+                    type: string
+                  expiresIn:
+                    type: number
+                  tokenType:
+                    type: string
+                  user:
+                    type: object
+        '401':
+          description: Invalid credentials
+
+  /auth/register:
+    post:
+      summary: User Registration
+      description: Register a new user account
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                  example: user123
+                password:
+                  type: string
+                  format: password
+                  minLength: 8
+                  example: securepassword123
+                email:
+                  type: string
+                  format: email
+                  example: user@example.com
+      responses:
+        '201':
+          description: User registered successfully
+        '400':
+          description: Username already exists
+
+  # Blockchain Operations
+  /api/v1/blockchain/dag:
+    get:
+      summary: Get DAG State
+      description: Retrieve current DAG state with nodes and metrics
+      tags:
+        - Blockchain
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 100
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: DAG state retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nodes:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Block'
+                  total:
+                    type: integer
+                  tips:
+                    type: array
+                    items:
+                      type: string
+                  metrics:
+                    type: object
+
+  /api/v1/blockchain/dag/nodes/{nodeId}:
+    get:
+      summary: Get Specific Node
+      description: Retrieve a specific DAG node by ID
+      tags:
+        - Blockchain
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: nodeId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Node retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Block'
+        '404':
+          description: Node not found
+
+  /api/v1/blockchain/dag/tips:
+    get:
+      summary: Get DAG Tips
+      description: Retrieve current DAG tips (unconfirmed transactions)
+      tags:
+        - Blockchain
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: max
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 10
+      responses:
+        '200':
+          description: Tips retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tips:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Transaction'
+                  count:
+                    type: integer
+
+  /api/v1/blockchain/status:
+    get:
+      summary: Get Blockchain Status
+      description: Retrieve blockchain status and metrics
+      tags:
+        - Blockchain
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+                  metrics:
+                    type: object
+                  version:
+                    type: string
+
+  # Transaction Operations
+  /api/v1/transactions/submit:
+    post:
+      summary: Submit Transaction
+      description: Submit a new transaction to the blockchain
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - sender
+                - receiver
+                - amount
+              properties:
+                sender:
+                  type: string
+                  format: address
+                  example: kx1q9f5j8g7h6d5s4a3z2x1c9v8b7n6m5k4j3i2h1g
+                receiver:
+                  type: string
+                  format: address
+                  example: kx1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t
+                amount:
+                  type: number
+                  minimum: 0
+                  example: 100.5
+                data:
+                  type: object
+                  description: Additional transaction data
+                privateKey:
+                  type: string
+                  description: Private key for signing (optional if using wallet)
+      responses:
+        '201':
+          description: Transaction submitted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactionId:
+                    type: string
+                  status:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+                  message:
+                    type: string
+        '400':
+          description: Invalid transaction data
+
+  /api/v1/transactions/{transactionId}:
+    get:
+      summary: Get Transaction
+      description: Retrieve a specific transaction by ID
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: transactionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Transaction retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+        '404':
+          description: Transaction not found
+
+  /api/v1/transactions/:
+    get:
+      summary: Get Transactions
+      description: Retrieve transactions with optional filtering
+      tags:
+        - Transactions
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 100
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+        - name: sender
+          in: query
+          schema:
+            type: string
+            format: address
+        - name: receiver
+          in: query
+          schema:
+            type: string
+            format: address
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [pending, confirmed, failed]
+      responses:
+        '200':
+          description: Transactions retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Transaction'
+                  total:
+                    type: integer
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                  filters:
+                    type: object
+
+  # Wallet Operations
+  /api/v1/wallet/create:
+    post:
+      summary: Create Wallet
+      description: Create a new wallet
+      tags:
+        - Wallet
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: My Wallet
+                password:
+                  type: string
+                  format: password
+                type:
+                  type: string
+                  enum: [standard, hardware, multisig]
+                  default: standard
+      responses:
+        '201':
+          description: Wallet created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  walletId:
+                    type: string
+                  address:
+                    type: string
+                  publicKey:
+                    type: string
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  createdAt:
+                    type: string
+                    format: date-time
+                  warning:
+                    type: string
+
+  /api/v1/wallet/{walletId}:
+    get:
+      summary: Get Wallet
+      description: Retrieve wallet information
+      tags:
+        - Wallet
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: walletId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Wallet retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  walletId:
+                    type: string
+                  address:
+                    type: string
+                  publicKey:
+                    type: string
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  balance:
+                    type: number
+                  createdAt:
+                    type: string
+                    format: date-time
+                  lastActivity:
+                    type: string
+                    format: date-time
+                  transactionCount:
+                    type: integer
+                  isEncrypted:
+                    type: boolean
+        '404':
+          description: Wallet not found
+
+  /api/v1/wallet/{walletId}/balance:
+    get:
+      summary: Get Wallet Balance
+      description: Retrieve wallet balance information
+      tags:
+        - Wallet
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: walletId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Balance retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  walletId:
+                    type: string
+                  address:
+                    type: string
+                  balance:
+                    type: number
+                  pendingBalance:
+                    type: number
+                  lastUpdated:
+                    type: string
+                    format: date-time
+
+  # Consensus Operations
+  /api/v1/consensus/status:
+    get:
+      summary: Get Consensus Status
+      description: Retrieve consensus status and information
+      tags:
+        - Consensus
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: detailed
+          in: query
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Consensus status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  algorithm:
+                    type: string
+                  status:
+                    type: string
+                  round:
+                    type: integer
+                  phase:
+                    type: string
+                  validators:
+                    type: object
+                  lastBlock:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+                  metrics:
+                    type: object
+
+  /api/v1/consensus/validators:
+    get:
+      summary: Get Validators
+      description: Retrieve list of validators
+      tags:
+        - Consensus
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: active
+          in: query
+          schema:
+            type: boolean
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+            default: 100
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            default: 0
+      responses:
+        '200':
+          description: Validators retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  validators:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        address:
+                          type: string
+                        stake:
+                          type: number
+                        reputation:
+                          type: number
+                        status:
+                          type: string
+                        lastActive:
+                          type: string
+                          format: date-time
+                        blocksProduced:
+                          type: integer
+                        uptime:
+                          type: number
+                  total:
+                    type: integer
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+                  filters:
+                    type: object
+
+  # WebSocket Events
+  /websocket:
+    get:
+      summary: WebSocket Connection
+      description: Establish WebSocket connection for real-time updates
+      tags:
+        - WebSocket
+      responses:
+        '101':
+          description: WebSocket connection established
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+  schemas:
+    Transaction:
+      type: object
+      required:
+        - id
+        - sender
+        - receiver
+        - amount
+        - timestamp
+        - signature
+      properties:
+        id:
+          type: string
+          example: "tx_0x123abc456def789ghi012jkl345mno678pqr901stu"
+        sender:
+          type: string
+          format: address
+          example: "kx1q9f5j8g7h6d5s4a3z2x1c9v8b7n6m5k4j3i2h1g"
+        receiver:
+          type: string
+          format: address
+          example: "kx1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t"
+        amount:
+          type: number
+          example: 100.5
+        timestamp:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00Z"
+        signature:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu..."
+        parents:
+          type: array
+          items:
+            type: string
+          description: Parent transaction IDs in DAG
+        status:
+          type: string
+          enum: [pending, confirmed, failed]
+          example: "confirmed"
+        fee:
+          type: number
+          example: 0.001
+        data:
+          type: object
+          description: Additional transaction data
+
+    Block:
+      type: object
+      required:
+        - id
+        - transactions
+        - timestamp
+        - validator
+        - signature
+      properties:
+        id:
+          type: string
+          example: "block_0x123abc456def789ghi012jkl345mno678pqr901stu"
+        transactions:
+          type: array
+          items:
+            type: string
+          description: Array of transaction IDs
+        timestamp:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00Z"
+        validator:
+          type: string
+          format: address
+          example: "kx1v1l2i3d4a5t6o7r8a9d0d1r2e3s4s5i6g7n8a9t0u"
+        signature:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu..."
+        parents:
+          type: array
+          items:
+            type: string
+          description: Parent block IDs in DAG
+        height:
+          type: integer
+          example: 12345
+        hash:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu"
+        merkleRoot:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu"
+        nonce:
+          type: integer
+          example: 42
+
+    Wallet:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "wallet_0x123abc456def789ghi012jkl345mno678pqr901stu"
+        address:
+          type: string
+          format: address
+          example: "kx1q9f5j8g7h6d5s4a3z2x1c9v8b7n6m5k4j3i2h1g"
+        publicKey:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu..."
+        name:
+          type: string
+          example: "My Wallet"
+        type:
+          type: string
+          enum: [standard, hardware, multisig]
+          example: "standard"
+        balance:
+          type: number
+          example: 1000.5
+        createdAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00Z"
+        lastActivity:
+          type: string
+          format: date-time
+          example: "2024-01-15T12:45:00Z"
+        transactionCount:
+          type: integer
+          example: 25
+        isEncrypted:
+          type: boolean
+          example: true
+
+    Validator:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "validator_0x123abc456def789ghi012jkl345mno678pqr901stu"
+        address:
+          type: string
+          format: address
+          example: "kx1v1l2i3d4a5t6o7r8a9d0d1r2e3s4s5i6g7n8a9t0u"
+        publicKey:
+          type: string
+          example: "0x123abc456def789ghi012jkl345mno678pqr901stu..."
+        stake:
+          type: number
+          example: 10000.0
+        reputation:
+          type: number
+          minimum: 0
+          maximum: 100
+          example: 95.5
+        status:
+          type: string
+          enum: [active, inactive, slashed]
+          example: "active"
+        joinedAt:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00Z"
+        lastActive:
+          type: string
+          format: date-time
+          example: "2024-01-15T12:45:00Z"
+        blocksProduced:
+          type: integer
+          example: 150
+        blocksMissed:
+          type: integer
+          example: 2
+        uptime:
+          type: number
+          minimum: 0
+          maximum: 100
+          example: 99.5
+        rewards:
+          type: number
+          example: 500.25
+        penalties:
+          type: number
+          example: 0
+        performance:
+          type: object
+          properties:
+            blockProductionRate:
+              type: number
+              example: 98.7
+            voteParticipation:
+              type: number
+              example: 99.9
+            responseTime:
+              type: number
+              example: 150
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Invalid request"
+        details:
+          type: object
+        timestamp:
+          type: string
+          format: date-time
+          example: "2024-01-15T10:30:00Z"
+
+tags:
+  - name: General
+    description: General API endpoints
+  - name: Authentication
+    description: User authentication and authorization
+  - name: Blockchain
+    description: Blockchain and DAG operations
+  - name: Transactions
+    description: Transaction management
+  - name: Wallet
+    description: Wallet management
+  - name: Consensus
+    description: Consensus mechanism and validators
+  - name: WebSocket
+    description: Real-time WebSocket events
+
+security:
+  - bearerAuth: []
+  - apiKeyAuth: []
